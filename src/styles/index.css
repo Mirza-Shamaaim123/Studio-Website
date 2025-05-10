@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+video {
+  object-fit: cover;
+}
+body {
+  margin: 0;
+}
+
+section {
+  height: 100vh; /* full viewport height */
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  position: sticky !important;
+  top: 0;
+  z-index: 1; /* so sections stack correctly */
+}
+footer {
+  position: sticky !important;
+  top: 0;
+}
+
+.section1 {
+  background: #3498db;
+}
+.section2 {
+  background: #1a1a1a;
+  height: 7000px;
+}
+.section3 {
+  background: #2ecc71;
+  height: 3000px;
+}
+.section4 {
+  background: #9b59b6;
+  height: 3000px;
+}
+.section5 {
+  background: rgb(34, 34, 34);
+  height: 1200px;
+}
+.section6 {
+  background: #1a1a1a;
+  height: 1500px;
+}
+
+.bg-color {
+  @apply bg-[#5a6566];
+}
+.grad-bg {
+  background: linear-gradient(to right, #303f9f, #9c27b0);
+}
+.grad-bg:hover {
+  background: linear-gradient(to right, #9c27b0, #303f9f) !important;
+}
+
+.corner-btn:hover {
+  background: linear-gradient(to right, #9c27b0, #303f9f) !important;
+}
+
+/* .sec3{
+    background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWMlMjBzdHVkaW98ZW58MHx8MHx8fDA%3D')
+  } */
+.sec3 {
+  background-image: url("https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGlvfGVufDB8fDB8fHww");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sec3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.396);
+  z-index: 1;
+}
+
+.bg-primary-1 {
+  @apply bg-[#372875];
+}
+
+.bg-web-red {
+  @apply bg-[#e7382b];
+}
+
+.bg-primary-2 {
+  @apply bg-[#774b8e];
+}
+
+.color {
+  color: #ffffffeb;
+}
+
+.vertical-bar {
+  width: 5px; /* Adjust width for thickness */
+  height: 50vh;
+  background: linear-gradient(
+    to bottom,
+    blue,
+    transparent
+  ); /* Solid blue at the top, fading to transparent at the bottom */
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translate(-50%, 0); /* Start at the bottom */
+  }
+  100% {
+    transform: translate(-50%, -100vh); /* Move to the top */
+  }
+}
