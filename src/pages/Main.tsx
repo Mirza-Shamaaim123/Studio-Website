@@ -447,7 +447,7 @@ export default function Main() {
               <motion.div
                 className="absolute w-[300px] h-[300px] border-0 border-white/10 "
                 style={{
-                  background: "linear-gradient(45deg, #303F9F, #9C27B0 )",
+                  background: "#ff4438",
                   transformStyle: "preserve-3d",
                   backfaceVisibility: "visible",
                   transform: "translateZ(150px)",
@@ -459,7 +459,7 @@ export default function Main() {
               <motion.div
                 className="absolute w-[300px] h-[300px] border-0 border-white/10 "
                 style={{
-                  background: "linear-gradient(45deg, #303F9F, #9C27B0)",
+                  background: "#ff4438",
                   transformStyle: "preserve-3d",
                   backfaceVisibility: "visible",
                   transform: "translateZ(-150px) rotateY(180deg)",
@@ -471,7 +471,7 @@ export default function Main() {
               <motion.div
                 className="absolute w-[300px] h-[300px] border-0 border-white/10 "
                 style={{
-                  background: "linear-gradient(45deg, #303F9F, #9C27B0)",
+                  background: "#ff4438",
                   transformStyle: "preserve-3d",
                   backfaceVisibility: "visible",
                   transform: "translateX(150px) rotateY(90deg)",
@@ -483,7 +483,7 @@ export default function Main() {
               <motion.div
                 className="absolute w-[300px] h-[300px] border-0 border-white/10 "
                 style={{
-                  background: "linear-gradient(45deg, #303F9F, #9C27B0)",
+                  background: "#ff4438",
                   transformStyle: "preserve-3d",
                   backfaceVisibility: "visible",
                   transform: "translateX(-150px) rotateY(-90deg)",
@@ -495,7 +495,7 @@ export default function Main() {
               <motion.div
                 className="absolute w-[300px] h-[300px] border-0 border-white/10 "
                 style={{
-                  background: "linear-gradient(45deg, #303F9F, #9C27B0)",
+                  background: "#ff4438",
                   transformStyle: "preserve-3d",
                   backfaceVisibility: "visible",
                   transform: "translateY(-150px) rotateX(90deg)",
@@ -507,7 +507,7 @@ export default function Main() {
               <motion.div
                 className="absolute w-[300px] h-[300px] border-0 border-white/10 "
                 style={{
-                  background: "linear-gradient(45deg, #303F9F, #9C27B0)",
+                  background: "#ff4438",
                   transformStyle: "preserve-3d",
                   backfaceVisibility: "visible",
                   transform: "translateY(150px) rotateX(-90deg)",

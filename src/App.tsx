@@ -9,10 +9,12 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import About from './pages/About';
 // import "./styles/App.css"
+
 import "./styles/index.css"
 import Main from './pages/Main';
 import Footer from './components/Footer';
 import PinnedImageScrollSection from './components/ServicesAnimation';
+import Projects from './pages/project';
 
 const theme = {
   colors: {
@@ -33,8 +35,10 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/company" element={<Company />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/projects" element={<Projects/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          
           <Route path="/services-animate" element={<PinnedImageScrollSection />} />
         </Routes>
         <Footer />

@@ -83,14 +83,14 @@ const AnimatedLine = () => {
               color: white;
             }
             20% {
-              opacity: 1;
+              opacity: 0.7;
               letter-spacing: 2px;
-              color:rgb(196, 120, 209));
+              color: rgb(255, 255, 255);
             }
             70% {
               letter-spacing: 15px;
-              opacity: 1;
-              color:rgb(183, 74, 202);
+              opacity: 0.7;
+              color: rgb(255, 255, 255);
             }
             100% {
               letter-spacing: 20px;
@@ -107,10 +107,11 @@ const AnimatedLine = () => {
         style={{
           width: "3px",
           height: "75vh",
-          background: "linear-gradient(to bottom, rgb(183, 74, 202), transparent)",
+          background: " rgb(255, 255, 255)",
           top: "100%",
           left: "50%",
-          transform: "translate(-50%, 0%)"
+          transform: "translate(-50%, 0%)",
+          opacity : 0.2
         }}
       />
       

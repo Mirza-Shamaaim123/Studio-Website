@@ -527,12 +527,7 @@ ul.contact-info li {
   gap: 1.5rem;
   font-size: 1.5rem;
 }
-.red-hover{
-  transition: all 200ms linear;
-}
-.red-hover:hover{
- color: #FF4438;
-}
+
 .contact-right form input:focus,
 .contact-right form input:active,
 .contact-right form textarea:focus,

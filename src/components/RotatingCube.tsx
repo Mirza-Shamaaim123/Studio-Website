@@ -28,7 +28,7 @@ export default function RotatingCube() {
                     key={face}
                     className="absolute w-[300px] h-[300px]"
                     style={{
-                        background: "linear-gradient(45deg, #303F9F, #9C27B0)",
+                        background: "#ff4438",
                         transformStyle: "preserve-3d",
                         backfaceVisibility: "visible",
                         transform: {
@@ -39,7 +39,7 @@ export default function RotatingCube() {
                             top: "translateY(-150px) rotateX(90deg)",
                             bottom: "translateY(150px) rotateX(-90deg)",
                         }[face],
-                        boxShadow: "0 0 50px rgba(129, 102, 158, 0.2)",
+                        boxShadow: "#ff4438",
                     }}
                 />
             ))}

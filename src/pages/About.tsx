@@ -1170,7 +1170,7 @@ const AboutUsPage: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                WHO WE ARE
+                WHO WE ARE ?
               </motion.h1>
             </div>
           </motion.div>

@@ -1,4 +1,5 @@
 import type React from "react"
+import './testomonial.css';
 import { useState, useRef, useEffect } from "react"
 
 interface Testimonial {

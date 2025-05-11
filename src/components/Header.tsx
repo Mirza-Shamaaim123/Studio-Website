@@ -1,73 +1,163 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
-const HeaderContainer = styled.header`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: black;
-  background-color: #f9f9f990;
-  border-radius
-`;
 
-const Logo = styled.div`
-  img {
-    height: 50px;
-  }
-`;
+import { useState, useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { X, ChevronDown, ArrowRight } from "lucide-react"
 
-const Nav = styled.nav`
-  display: flex;
-  gap: 2rem;
-`;
+export default function Header() {
+  const location = useLocation()
 
-const NavLink = styled(Link)`
-  color: black;
-  font-size: 1.1rem;
-  position: relative;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.primary};
-    transition: width 0.3s ease;
+  const nonTransparentRoutes = ["/contact", "/faq", "/brief"]
+
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isTransparent, setIsTransparent] = useState(() => {
+    return !nonTransparentRoutes.includes(location.pathname)
+  })
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
   }
 
-  &:hover::after {
-    width: 100%;
-  }
-`;
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      const isOnFixedPage = nonTransparentRoutes.includes(location.pathname)
 
-const Header = () => {
+      setIsScrolled(scrollY > 0)
+      setIsTransparent(!isOnFixedPage && scrollY <= 500)
+    }
+
+    // Run once on mount and whenever the path changes
+    handleScroll()
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [location.pathname])
+
   return (
-    
-    <div style={{ backgroundColor : "#ffffffeb", height : '70px',  }} className='fixed rounded-lg z-[6000]  top-0 left-0 z-100 flex justify-between items-center text-black  h-[100px] w-full mx-auto p-[20px]' >
-      <Logo>
-        <Link to="/">
-          <img src="/logo.png" alt="Elite Studio" />
-        </Link>
-      </Logo>
-      <Nav>
-        <NavLink to="/">Home</NavLink>
-        {/* <NavLink to="/company">Company</NavLink> */}
-        <NavLink to="/services">Services</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </Nav>
-    </div>
-  );
-};
+    <>
+      <header className={`navbar ${isTransparent ? "navbar-transparent" : "navbar-white"}`}>
+        <div className="navbar-container">
+          {/* Mobile menu button */}
+          <button className="navbar-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+            <div className="navbar-toggle-line"></div>
+            <div className="navbar-toggle-line"></div>
+            <div className="navbar-toggle-line"></div>
+          </button>
 
-export default Header; 
+          {/* Desktop navigation */}
+          <nav className="navbar-nav">
+            <Link to="/about" className="navbar-link">
+              About
+            </Link>
+            <Link to="/projects" className="navbar-link">
+              Projects
+            </Link>
+
+            {/* Services dropdown - now using hover */}
+            <div className="services-dropdown">
+              <div className="navbar-link services-dropdown-toggle">
+                Services <ChevronDown className="dropdown-icon" size={16} />
+              </div>
+
+              <div className="services-dropdown-menu">
+                <Link to="/services/animation" className="dropdown-item">
+                  Animation
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
+                <Link to="/services/video-productions" className="dropdown-item">
+                  Video Productions
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
+                <Link to="/services/image-creation" className="dropdown-item">
+                  Image Creation
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
+                <Link to="/services/audio-services" className="dropdown-item">
+                  Audio Services
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
+                <Link to="/services/time-lapse-video" className="dropdown-item">
+                  Time Lapse Video
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
+                <Link to="/services/branding" className="dropdown-item">
+                  Branding
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
+              </div>
+            </div>
+
+            <Link to="/contact" className="navbar-link">
+              Contact
+            </Link>
+          </nav>
+
+          {/* Logo */}
+          <div className="navbar-logo">
+            <Link to="/">
+              <div className="navbar-logo-cube"></div>
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile menu */}
+      <div className={`mobile-menu ${isOpen ? "mobile-menu-open" : ""}`}>
+        <div className="mobile-menu-container">
+          <div className="mobile-menu-header">
+            <button onClick={toggleMenu} className="mobile-menu-close" aria-label="Close menu">
+              <X className="mobile-menu-close-icon" />
+            </button>
+            <Link to="/" className="mobile-menu-logo-link">
+              <div className="mobile-menu-logo"></div>
+            </Link>
+          </div>
+
+          <nav className="mobile-menu-nav">
+            <Link to="/about" className="mobile-menu-link" onClick={toggleMenu}>
+              About
+            </Link>
+            <Link to="/projects" className="mobile-menu-link" onClick={toggleMenu}>
+              Projects
+            </Link>
+            <Link to="/contact" className="mobile-menu-link" onClick={toggleMenu}>
+              Contact
+            </Link>
+            {/* Services section in mobile menu */}
+            <div className="mobile-menu-services">
+              <h3 className="mobile-menu-services-title">Services</h3>
+              <div className="mobile-menu-services-grid">
+                <Link to="/services/animation" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Animation
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
+                <Link to="/services/video-productions" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Video Productions
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
+                <Link to="/services/image-creation" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Image Creation
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
+                <Link to="/services/audio-services" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Audio Services
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
+                <Link to="/services/time-lapse-video" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Time Lapse Video
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
+                <Link to="/services/branding" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Branding
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </>
+  )
+}
