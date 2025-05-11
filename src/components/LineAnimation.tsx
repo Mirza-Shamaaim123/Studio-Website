@@ -117,7 +117,7 @@ const AnimatedLine = () => {
       
       <div
         ref={textRef}
-        className="fixed z-[999] font-bold text-4xl"
+        className="fixed z-[999] font-bold text-xl"
         style={{
           top: "10%",
           left: "50%",
