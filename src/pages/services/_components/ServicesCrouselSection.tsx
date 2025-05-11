@@ -20,18 +20,14 @@ const ServicesScrollSection: React.FC<ServicesScrollSectionProps> = ({ content, 
   const sectionRef = useRef<HTMLDivElement | null>(null)
   const scrolling = useRef(false)
 
-  const scrollDelay = 800 // milliseconds
+  const scrollDelay = 800
 
   // Wheel scroll
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
-      const section = sectionRef.current
       const isAtFirstStep = activeIndex === 0 && e.deltaY < 0
       const isAtLastStep = activeIndex === content.steps.length - 1 && e.deltaY > 0
-
-      if (isAtFirstStep || isAtLastStep) {
-        return // Let normal scroll behavior occur at bounds
-      }
+      if (isAtFirstStep || isAtLastStep) return
 
       e.preventDefault()
       if (scrolling.current) return
@@ -45,10 +41,7 @@ const ServicesScrollSection: React.FC<ServicesScrollSectionProps> = ({ content, 
 
     const section = sectionRef.current
     section?.addEventListener("wheel", handleWheel, { passive: false })
-
-    return () => {
-      section?.removeEventListener("wheel", handleWheel)
-    }
+    return () => section?.removeEventListener("wheel", handleWheel)
   }, [activeIndex, content.steps.length])
 
   // Touch scroll
@@ -62,9 +55,7 @@ const ServicesScrollSection: React.FC<ServicesScrollSectionProps> = ({ content, 
     const handleTouchMove = (e: TouchEvent) => {
       if (scrolling.current) return
 
-      const touchY = e.touches[0].clientY
-      const diff = touchStartY - touchY
-
+      const diff = touchStartY - e.touches[0].clientY
       if (Math.abs(diff) < 50) return
 
       if (diff > 0 && activeIndex < content.steps.length - 1) {
@@ -90,7 +81,6 @@ const ServicesScrollSection: React.FC<ServicesScrollSectionProps> = ({ content, 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (scrolling.current) return
-
       if (e.key === "ArrowDown" && activeIndex < content.steps.length - 1) {
         scrollStep(activeIndex + 1)
       } else if (e.key === "ArrowUp" && activeIndex > 0) {
@@ -99,18 +89,10 @@ const ServicesScrollSection: React.FC<ServicesScrollSectionProps> = ({ content, 
     }
 
     window.addEventListener("keydown", handleKeyDown)
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown)
-    }
+    return () => window.removeEventListener("keydown", handleKeyDown)
   }, [activeIndex, content.steps.length])
 
-  // Step click
-  const handleStepClick = (index: number) => {
-    if (scrolling.current || index === activeIndex) return
-    scrollStep(index)
-  }
-
-  // Scroll handler
+  // Scroll step
   const scrollStep = (index: number) => {
     scrolling.current = true
     setActiveIndex(index)
@@ -119,14 +101,19 @@ const ServicesScrollSection: React.FC<ServicesScrollSectionProps> = ({ content, 
     }, scrollDelay)
   }
 
+  const handleStepClick = (index: number) => {
+    if (scrolling.current || index === activeIndex) return
+    scrollStep(index)
+  }
+
   return (
     <div className="services-crousel-scroll-section" ref={sectionRef}>
-      {/* Left content side */}
+      {/* Left side - Text */}
       <div className="services-crousel-content-side">
         <h2 className="services-crousel-main-heading">{content.mainHeading}</h2>
 
         <div className="services-crousel-steps-container">
-          {/* Step numbers */}
+          {/* Numbers */}
           <div className="services-crousel-step-numbers">
             {content.steps.map((step, index) => (
               <div
@@ -150,15 +137,19 @@ const ServicesScrollSection: React.FC<ServicesScrollSectionProps> = ({ content, 
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
               >
-                <h3 className="services-crousel-step-title">{content.steps[activeIndex].title}</h3>
-                <p className="services-crousel-step-description">{content.steps[activeIndex].description}</p>
+                <h3 className="services-crousel-step-title">
+                  {content.steps[activeIndex].title}
+                </h3>
+                <p className="services-crousel-step-description">
+                  {content.steps[activeIndex].description}
+                </p>
               </motion.div>
             </AnimatePresence>
           </div>
         </div>
       </div>
 
-      {/* Right image side */}
+      {/* Right side - Image */}
       <div className="services-crousel-image-side">
         <AnimatePresence mode="wait">
           <motion.div

@@ -3,6 +3,7 @@ import ServicesHeroSection from "./_components/ServicesHeroSection";
 import ServiceThreeCards from "./_components/ServiceThreeCards";
 import ServicesProject from "./_components/ServicesProjects";
 import ServicesScrollSection from "./_components/ServicesCrouselSection";
+import ServicesFAQ from "./_components/ServicesFaqs";
 const cardData = [
   {
     title: "Strategy",
@@ -63,6 +64,49 @@ const crouselImages = [
   "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2835&auto=format&fit=crop", // Final delivery visualization for step 4
 ];
 
+
+ const faqData = [
+    {
+      question: "How complicated is the process?",
+      answer:
+        "With years of experience, we have made this process for our clients as simple as possible. Thanks to our skillful account manager we deliver top-class customer experiences with personalized self-service. Our comprehensible workflow enables customers to review, comment, and get regular updates on the progress.",
+    },
+    {
+      question: "Is my data safe with you?",
+      answer:
+        "Yes, we take data security very seriously. All your information is encrypted and stored securely following industry best practices and compliance standards.",
+    },
+    {
+      question: "How many projects can you do at the same time?",
+      answer:
+        "We have a team of professionals that allows us to handle multiple projects simultaneously without compromising on quality or timelines.",
+    },
+    {
+      question: "What is your turnaround time?",
+      answer:
+        "Our turnaround time varies depending on the complexity of the project, but we always strive to deliver within the agreed timeframe.",
+    },
+    {
+      question: "How will I communicate with a team throughout the process?",
+      answer:
+        "We provide multiple communication channels including email, phone, and our project management system where you can track progress and communicate with the team.",
+    },
+    {
+      question: "What files do I need to send to start a project?",
+      answer:
+        "The required files depend on the nature of your project. Our team will guide you through the specific requirements during the initial consultation.",
+    },
+  ]
+
+  const handleSendMessage = () => {
+    console.log("Send message clicked")
+    // Implement your send message functionality here
+  }
+
+  const handleScheduleCall = () => {
+    console.log("Schedule call clicked")
+    // Implement your schedule call functionality here
+  }
 const AnimationServices = () => {
   return (
     <>
@@ -73,7 +117,8 @@ const AnimationServices = () => {
       <ServiceThreeCards cards={cardData} />
       <ServicesProject projectImages={projectImages} />
       <ServicesScrollSection content={crouselContent} images={crouselImages} />
-      
+      <ServicesFAQ faqItems={faqData} onSendMessage={handleSendMessage} onScheduleCall={handleScheduleCall} />
+
     </>
   );
 };
