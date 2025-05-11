@@ -152,7 +152,7 @@ service project section */
   font-weight: 700;
   color: #000;
   margin-bottom: 80px;
-  line-height: 1.services-crousel-2;
+  line-height: 1.2;
 }
 
 .services-crousel-steps-container {
@@ -174,7 +174,7 @@ service project section */
   color: #ccc;
   min-width: 60px;
   cursor: pointer;
-  transition: color 0.services-crousel-5s ease;
+  transition: color 0.5s ease;
 }
 
 .services-crousel-step-number.active {
@@ -212,7 +212,7 @@ service project section */
 
 .services-crousel-step-description {
   font-size: 16px;
-  line-height: 1.services-crousel-6;
+  line-height: 1.6;
   color: #666;
   margin: 0;
   max-width: 400px;
@@ -341,6 +341,6 @@ service project section */
 
   .services-crousel-step-description {
     font-size: 13px;
-    line-height: 1.services-crousel-5;
+    line-height: 1.5;
   }
 }
