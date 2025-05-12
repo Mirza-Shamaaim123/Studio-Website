@@ -14,6 +14,18 @@ export default function Header() {
   const [isTransparent, setIsTransparent] = useState(() => {
     return !nonTransparentRoutes.includes(location.pathname)
   })
+  useEffect(() => {
+  if (isOpen) {
+    document.body.classList.add("no-scroll");
+  } else {
+    document.body.classList.remove("no-scroll");
+  }
+
+  return () => {
+    document.body.classList.remove("no-scroll"); // cleanup in case component unmounts
+  };
+}, [isOpen]);
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)

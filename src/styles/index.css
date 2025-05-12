@@ -345,6 +345,7 @@ footer {
 
 .mobile-menu-open {
   transform: translateX(0);
+  z-index: 9999999999;
 }
 
 .mobile-menu-container {
@@ -454,4 +455,8 @@ footer {
 .home-page-testomonial{
   background-color: #ffffff;
   padding: 100px 15px;
+}
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
