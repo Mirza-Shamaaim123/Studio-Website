@@ -1,8 +1,6 @@
 import React from "react";
-import "./Projects.css";
+import "./projects.css";
 import MediaDisplay from "../components/MeidaDisplay";
-import { motion } from "framer-motion";
-import RotatingCube from "../components/RotatingCube";
 import ServicesBoxSection from "./services/_components/ServicesBoxSection";
 
 
