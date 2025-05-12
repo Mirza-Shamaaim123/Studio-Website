@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './styles/GlobalStyle';
 import Header from './components/Header';
-import Home from './pages/Home';
 import Company from './pages/Company';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
@@ -11,16 +10,19 @@ import About from './pages/About';
 import "./styles/services.css"
 
 import "./styles/index.css"
-import Main from './pages/Main';
+
 import Footer from './components/Footer';
 import PinnedImageScrollSection from './components/ServicesAnimation';
 import Projects from './pages/project';
-import AnimationServices from './pages/services/animation';
+
 import AudioServices from './pages/services/AudioServices';
 import BrandingServices from './pages/services/Branding';
 import ImageCreationServices from './pages/services/ImageCreation';
 import TimeLapseVideoServices from './pages/services/TimeLapseVideo';
-import VideoProductionServices from './pages/services/videoProduction';
+import AnimationServices from './pages/services/Animation';
+import VideoProductionServices from './pages/services/VideoProduction';
+import Main from './pages/Main';
+
 
 const theme = {
   colors: {
@@ -41,14 +43,15 @@ function App() {
           <Route path="/company/" element={<Company />} />
           <Route path="/services/" element={<Services />} />
           <Route path="/projects/" element={<Projects/>} />
-          <Route path="/contact/" element={<Contact />} />
+          <Route path="/about/" element={<About />} />
+           <Route path="/contact/" element={<Contact />} />
           <Route path="/services/animation/" element={<AnimationServices/>} />
-          <Route path="/services/video-production/" element={<AudioServices />} />
+          <Route path="/services/video-productions/" element={<VideoProductionServices />} />
           <Route path="/services/branding/" element={<BrandingServices />} />
           <Route path="/services/image-creation/" element={<ImageCreationServices />} />
           <Route path="/services/time-lapse-video/" element={<TimeLapseVideoServices />} />
-          <Route path="/services/audio-services" element={<VideoProductionServices />} /> 
-          <Route path="/services-animate" element={<PinnedImageScrollSection />} />
+          <Route path="/services/audio-production/" element={<AudioServices />} /> 
+          <Route path="/services-animate/" element={<PinnedImageScrollSection />} />
         </Routes>
         <Footer />
       </Router>

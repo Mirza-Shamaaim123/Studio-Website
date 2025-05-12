@@ -88,6 +88,10 @@ export default function TestimonialCard() {
   const hasPrev = currentIndex > 0
 
   return (
+    <>
+    <div className="about-container">
+              <h2 id="client-reviews" className="our-team">Client testimonials</h2>
+            </div>
     <div className="testimonial-container">
       <div
         className="testimonial-about-crousel"
@@ -113,7 +117,7 @@ export default function TestimonialCard() {
           <h4 className="testimonial-about-crousel-title">{testimonials[currentIndex].title}</h4>
           <p className="testimonial-about-crousel-text">{testimonials[currentIndex].content}</p>
         </div>
-
+   
         <div className="testimonial-about-crousel-dots">
           {testimonials.map((_, index) => (
             <button
@@ -126,5 +130,6 @@ export default function TestimonialCard() {
         </div>
       </div>
     </div>
+    </>
   )
 }

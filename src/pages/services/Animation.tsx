@@ -4,6 +4,8 @@ import ServiceThreeCards from "./_components/ServiceThreeCards";
 import ServicesProject from "./_components/ServicesProjects";
 import ServicesScrollSection from "./_components/ServicesCrouselSection";
 import ServicesFAQ from "./_components/ServicesFaqs";
+import PartnersSection from "./_components/ServicesPartner";
+import ServicesBoxSection from "./_components/ServicesBoxSection";
 const cardData = [
   {
     title: "Strategy",
@@ -107,6 +109,19 @@ const crouselImages = [
     console.log("Schedule call clicked")
     // Implement your schedule call functionality here
   }
+   const partnersData = [
+    { name: "KFK", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "KFK Logo" },
+    { name: "DKO", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "DKO Logo" },
+    { name: "Milieu", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Milieu Logo" },
+    { name: "Assemble", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Assemble Logo" },
+    { name: "PVA", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "PVA Logo" },
+    { name: "FIELDWORK", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "FIELDWORK Logo" },
+    { name: "MAIN PROJECTS", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "MAIN PROJECTS Logo" },
+    { name: "MHNDU", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "MHNDU Logo" },
+    { name: "PS", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "PS Logo" },
+    { name: "Eldridge Anderson", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Eldridge Anderson Logo" },
+  ]
+
 const AnimationServices = () => {
   return (
     <>
@@ -117,8 +132,9 @@ const AnimationServices = () => {
       <ServiceThreeCards cards={cardData} />
       <ServicesProject projectImages={projectImages} />
       <ServicesScrollSection content={crouselContent} images={crouselImages} />
+       <PartnersSection partners={partnersData} />
       <ServicesFAQ faqItems={faqData} onSendMessage={handleSendMessage} onScheduleCall={handleScheduleCall} />
-
+      <ServicesBoxSection/>
     </>
   );
 };

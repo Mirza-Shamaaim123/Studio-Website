@@ -76,6 +76,7 @@
   font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
+  color: #000000;
 }
 
 .testimonial-about-crousel-title {
@@ -86,8 +87,10 @@
 }
 
 .testimonial-about-crousel-text {
-  color: #4A4A4A;
-  max-width: 42rem;
+    color: #4A4A4A;
+    max-width: 42rem;
+    font-size: 16px;
+    font-weight: 300;
 }
 
 /* Navigation dots */
@@ -142,6 +145,13 @@
    .job-listings-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+@media screen and (max-width: 600px) {
+ .testimonial-container{
+  padding-top: 1rem !important;
+ }
+
+  
 }
 
 @media (min-width: 1024px) {

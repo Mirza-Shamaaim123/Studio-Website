@@ -556,6 +556,10 @@ ul.contact-info li {
     height: 100vh;
     padding: 1rem;
   }
+  .contact-left {
+    height: 100vh;
+    padding: 1rem;
+  }
 
   .contact-left {
     background: #fff;

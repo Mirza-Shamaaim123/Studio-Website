@@ -1,16 +1,20 @@
 import React, { useEffect, useRef } from 'react';
 
-interface MediaDisplayProps {
-    sectionId: string;
+interface MediaItem {
     title: string;
-    mediaLinks: string[];
+    link: string;
 }
 
-const MediaDisplay: React.FC<MediaDisplayProps> = ({ sectionId, title, mediaLinks }) => {
+interface MediaDisplayProps {
+    sectionId: string;
+    mediaItems: MediaItem[];
+}
+
+const MediaDisplay: React.FC<MediaDisplayProps> = ({ sectionId, mediaItems }) => {
     const sectionRef = useRef<HTMLDivElement>(null);
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
-    // Dynamically set section height to viewport height
+    // Set section height to viewport height
     useEffect(() => {
         const setSectionHeight = () => {
             if (sectionRef.current) {
@@ -20,49 +24,48 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({ sectionId, title, mediaLink
 
         setSectionHeight();
         window.addEventListener('resize', setSectionHeight);
-
-        return () => {
-            window.removeEventListener('resize', setSectionHeight);
-        };
+        return () => window.removeEventListener('resize', setSectionHeight);
     }, []);
 
-    // Reset videoRefs array when mediaLinks change
+    // Reset refs when items change
     useEffect(() => {
         videoRefs.current = [];
-    }, [mediaLinks]);
+    }, [mediaItems]);
 
     const renderMedia = () => {
-        const linkCount = mediaLinks.length;
+        const count = mediaItems.length;
 
-        if (linkCount === 1) {
-            const link = mediaLinks[0];
-            const isVideo = link.endsWith('.mp4');
+        if (count === 1) {
+            const item = mediaItems[0];
+            const isVideo = item.link.endsWith('.mp4');
             return (
                 <div className="media-container">
-                    {isVideo ? (
-                        <video
-                            ref={(el) => (videoRefs.current[0] = el)}
-                            className="media-content"
-                            autoPlay
-                            muted
-                            loop
-                        >
-                            <source src={link} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    ) : (
-                        <img src={link} alt="Media" className="media-content" />
-                    )}
-                    <div className="media-overlay">
-                        <span className="media-title">{title}</span>
+                    <div className="media-wrapper">
+                        {isVideo ? (
+                            <video
+                                ref={(el) => (videoRefs.current[0] = el)}
+                                className="media-content"
+                                autoPlay
+                                muted
+                                loop
+                            >
+                                <source src={item.link} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        ) : (
+                            <img src={item.link} alt={item.title} className="media-content" />
+                        )}
+                        <div className="media-overlay">
+                            <span className="media-title">{item.title}</span>
+                        </div>
                     </div>
                 </div>
             );
-        } else if (linkCount === 2) {
+        } else if (count === 2) {
             return (
                 <div className="media-container two-columns">
-                    {mediaLinks.map((link, index) => {
-                        const isVideo = link.endsWith('.mp4');
+                    {mediaItems.map((item, index) => {
+                        const isVideo = item.link.endsWith('.mp4');
                         return (
                             <div key={index} className="media-wrapper">
                                 {isVideo ? (
@@ -73,26 +76,26 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({ sectionId, title, mediaLink
                                         muted
                                         loop
                                     >
-                                        <source src={link} type="video/mp4" />
+                                        <source src={item.link} type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
                                 ) : (
-                                    <img src={link} alt={`Media ${index + 1}`} className="media-content" />
+                                    <img src={item.link} alt={item.title} className="media-content" />
                                 )}
                                 <div className="media-overlay">
-                                    <span className="media-title">{title}</span>
+                                    <span className="media-title">{item.title}</span>
                                 </div>
                             </div>
                         );
                     })}
                 </div>
             );
-        } else if (linkCount === 3) {
+        } else if (count === 3) {
             return (
                 <div className="media-container three-columns">
                     <div className="two-thirds">
-                        {mediaLinks.slice(0, 2).map((link, index) => {
-                            const isVideo = link.endsWith('.mp4');
+                        {mediaItems.slice(0, 2).map((item, index) => {
+                            const isVideo = item.link.endsWith('.mp4');
                             return (
                                 <div key={index} className="media-wrapper half-height">
                                     {isVideo ? (
@@ -103,22 +106,22 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({ sectionId, title, mediaLink
                                             muted
                                             loop
                                         >
-                                            <source src={link} type="video/mp4" />
+                                            <source src={item.link} type="video/mp4" />
                                             Your browser does not support the video tag.
                                         </video>
                                     ) : (
-                                        <img src={link} alt={`Media ${index + 1}`} className="media-content" />
+                                        <img src={item.link} alt={item.title} className="media-content" />
                                     )}
                                     <div className="media-overlay">
-                                        <span className="media-title">{title}</span>
+                                        <span className="media-title">{item.title}</span>
                                     </div>
                                 </div>
                             );
                         })}
                     </div>
                     <div className="one-third">
-                        {mediaLinks.slice(2, 3).map((link, index) => {
-                            const isVideo = link.endsWith('.mp4');
+                        {mediaItems.slice(2, 3).map((item, index) => {
+                            const isVideo = item.link.endsWith('.mp4');
                             return (
                                 <div key={index + 2} className="media-wrapper full-height">
                                     {isVideo ? (
@@ -129,14 +132,14 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({ sectionId, title, mediaLink
                                             muted
                                             loop
                                         >
-                                            <source src={link} type="video/mp4" />
+                                            <source src={item.link} type="video/mp4" />
                                             Your browser does not support the video tag.
                                         </video>
                                     ) : (
-                                        <img src={link} alt={`Media ${index + 3}`} className="media-content" />
+                                        <img src={item.link} alt={item.title} className="media-content" />
                                     )}
                                     <div className="media-overlay">
-                                        <span className="media-title">{title}</span>
+                                        <span className="media-title">{item.title}</span>
                                     </div>
                                 </div>
                             );
@@ -150,9 +153,9 @@ const MediaDisplay: React.FC<MediaDisplayProps> = ({ sectionId, title, mediaLink
     };
 
     return (
-        <section className="media-section" ref={sectionRef} id={sectionId}>
+        <div className="media-section" ref={sectionRef} id={sectionId}>
             {renderMedia()}
-        </section>
+        </div>
     );
 };
 

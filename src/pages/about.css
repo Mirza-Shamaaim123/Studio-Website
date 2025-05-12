@@ -560,6 +560,7 @@
 .our-team{
     font-size: 40px;
     margin-bottom: 60px;
+    color: #000000;
 }
 .team-content {
   margin-bottom: 40px;
@@ -716,6 +717,9 @@
    }
    .services-grid{
     display: block;
+   }
+   .hero-title{
+    font-size: 26px !important;
    }
 }
 /* Responsive Design */

@@ -7,7 +7,7 @@ import { X, ChevronDown, ArrowRight } from "lucide-react"
 export default function Header() {
   const location = useLocation()
 
-  const nonTransparentRoutes = ["/contact", "/faq", "/brief"]
+  const nonTransparentRoutes = ["/contact", "/projects", "/brief"]
 
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -74,7 +74,7 @@ export default function Header() {
                   Image Creation
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
-                <Link to="/services/audio-services" className="dropdown-item">
+                <Link to="/services/audio-production/" className="dropdown-item">
                   Audio Services
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
@@ -141,7 +141,7 @@ export default function Header() {
                   Image Creation
                   <ArrowRight className="service-link-icon" size={14} />
                 </Link>
-                <Link to="/services/audio-services" className="mobile-menu-service-link" onClick={toggleMenu}>
+                <Link to="/services/audio-production/" className="mobile-menu-service-link" onClick={toggleMenu}>
                   Audio Services
                   <ArrowRight className="service-link-icon" size={14} />
                 </Link>

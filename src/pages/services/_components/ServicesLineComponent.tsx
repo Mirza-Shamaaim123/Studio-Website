@@ -1,4 +1,3 @@
-"use client"
 
 import { useEffect, useRef } from "react"
 
@@ -107,7 +106,7 @@ const ServicesLineComponent = () => {
 
       <div
         ref={lineRef}
-        className="fixed z-[999] line-glow"
+        className="absolute z-[10] line-glow"
         style={{
           width: "1px",
           height: "75vh",
@@ -123,7 +122,7 @@ const ServicesLineComponent = () => {
 
       <div
         ref={textRef}
-        className="fixed z-[999] font-bold tracking-wider"
+        className="absolute z-[10] font-bold tracking-wider"
         style={{
           fontSize: "16px",
           top: "10%",

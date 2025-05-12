@@ -113,9 +113,9 @@ const Footer = () => {
         <div style={styles.footerColumn as React.CSSProperties}>
           <h2 style={styles.footerHeading}>Services</h2>
           <ul style={styles.footerList as React.CSSProperties}>
-            <li><a href="/services" style={styles.link}>Animations</a></li>
-            <li><a href="/services" style={styles.link}>Video Production</a></li>
-            <li><a href="/services" style={styles.link}>Image Creations</a></li>
+            <li><a href="/services/animation/" style={styles.link}>Animations</a></li>
+            <li><a href="/services/video-productions/" style={styles.link}>Video Production</a></li>
+            <li><a href="/services/image-creation/" style={styles.link}>Image Creations</a></li>
            
 
             {/* <li><a href="#" style={styles.link}>Architectural virtual reality</a></li> */}
@@ -126,9 +126,9 @@ const Footer = () => {
           <h2 style={styles.footerHeading}>Services</h2>
           <ul style={styles.footerList as React.CSSProperties}>
           
-            <li><a href="/services" style={styles.link}>Audio Production</a></li>
-            <li><a href="/services" style={styles.link}>Time-laps Video</a></li>
-            <li><a href="/services" style={styles.link}>Branding</a></li>
+            <li><a href="/services/audio-production/" style={styles.link}>Audio Production</a></li>
+            <li><a href="/services/time-lapse-video/" style={styles.link}>Time-laps Video</a></li>
+            <li><a href="/services/branding/" style={styles.link}>Branding</a></li>
 
             {/* <li><a href="#" style={styles.link}>Architectural virtual reality</a></li> */}
           </ul>
