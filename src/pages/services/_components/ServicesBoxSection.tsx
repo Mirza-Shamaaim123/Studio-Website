@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
+import { Link } from "react-router-dom"
 
 const ServicesBoxSection = () => {
   const { scrollY } = useScroll()
@@ -304,9 +305,9 @@ const ServicesBoxSection = () => {
             >
               <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-full sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] ready-text">
                 {headingTexts[9]}
-                <a href="/contact" className="hover:border-b-[4px]  cursor-pointer">
+                <Link to="/contact" className="hover:border-b-[4px]  cursor-pointer">
                     Drop Us a Line
-                </a>
+                </Link>
               </h1>
             </motion.div>
           </div>

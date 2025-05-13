@@ -1,9 +1,9 @@
 // Footer.jsx
 import React from 'react';
 import { Instagram, Linkedin, Youtube, Facebook, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  // CSS styles as JavaScript objects
   const styles = {
     footer: {
       backgroundColor: '#000',
@@ -73,7 +73,6 @@ const Footer = () => {
     }
   };
 
-  // Media query for responsive grid
   const useResponsiveGrid = () => {
     const [isDesktop, setIsDesktop] = React.useState(window.innerWidth >= 768);
     
@@ -94,31 +93,22 @@ const Footer = () => {
 
   return (
     <footer  style={{...styles.footer, zIndex: 10000, position: 'sticky'}}>
-      {/* Main Navigation */}
       <div style={{...styles.footerGrid, ...responsiveGridStyle}}>
-        {/* Studio Column */}
         <div style={styles.footerColumn as React.CSSProperties}>
           <h2 style={styles.footerHeading}>Studio</h2>
           <ul style={styles.footerList as React.CSSProperties}>
-            {/* <li><a href="#" style={styles.link}>Projects</a></li> */}
-            <li><a href="/" style={styles.link}>Home</a></li>
-            <li><a href="/about" style={styles.link}>About us</a></li>
-            {/* <li><a href="#" style={styles.link}>Blog</a></li> */}
-            <li><a href="/contact" style={styles.link}>Contact Us</a></li>
-            {/* <li><a href="#" style={styles.link}>Careers</a></li> */}
+            <li><Link to="/" style={styles.link}>Home</Link></li>
+            <li><Link to="/about" style={styles.link}>About us</Link></li>
+            <li><Link to="/contact" style={styles.link}>Contact Us</Link></li>
           </ul>
         </div>
-
-        {/* Services Column */}
         <div style={styles.footerColumn as React.CSSProperties}>
           <h2 style={styles.footerHeading}>Services</h2>
           <ul style={styles.footerList as React.CSSProperties}>
-            <li><a href="/services/animation/" style={styles.link}>Animations</a></li>
-            <li><a href="/services/video-production/" style={styles.link}>Video Production</a></li>
-            <li><a href="/services/image-creation/" style={styles.link}>Image Creations</a></li>
+            <li><Link to="/services/animation/" style={styles.link}>Animations</Link></li>
+            <li><Link to="/services/video-production/" style={styles.link}>Video Production</Link></li>
+            <li><Link to="/services/image-creation/" style={styles.link}>Image Creations</Link></li>
            
-
-            {/* <li><a href="#" style={styles.link}>Architectural virtual reality</a></li> */}
           </ul>
         </div>
 
@@ -126,23 +116,11 @@ const Footer = () => {
           <h2 style={styles.footerHeading}>Services</h2>
           <ul style={styles.footerList as React.CSSProperties}>
           
-            <li><a href="/services/audio-production/" style={styles.link}>Audio Production</a></li>
-            <li><a href="/services/time-lapse-video/" style={styles.link}>Time-laps Video</a></li>
-            <li><a href="/services/branding/" style={styles.link}>Branding</a></li>
-
-            {/* <li><a href="#" style={styles.link}>Architectural virtual reality</a></li> */}
+            <li><Link to="/services/audio-production/" style={styles.link}>Audio Production</Link></li>
+            <li><Link to="/services/time-lapse-video/" style={styles.link}>Time-laps Video</Link></li>
+            <li><Link to="/services/branding/" style={styles.link}>Branding</Link></li>
           </ul>
         </div>
-
-        {/* Support Column */}
-        {/* <div style={styles.footerColumn as React.CSSProperties}>
-          <h2 style={styles.footerHeading}>Support</h2>
-          <ul style={styles.footerList as React.CSSProperties}>
-            <li><a href="#" style={styles.link}>Frequently asked questions</a></li>
-            <li><a href="#" style={styles.link}>Contact us</a></li>
-            
-          </ul>
-        </div> */}
 
         {/* Follow us Column */}
         <div style={styles.footerColumn  as React.CSSProperties}>
@@ -152,7 +130,6 @@ const Footer = () => {
             <a target='_blank' href="https://www.linkedin.com/company/elite-design-studio-ksa" style={styles.link}><Linkedin size={24} /></a>
             <a target='_blank' href="https://www.facebook.com/elitedesignstud/" style={styles.link}><Facebook size={24} /></a>
             <a target='_blank' href="https://twitter.com/EliteDesignStud" style={styles.link}><Twitter size={24} /></a>
-            {/* <a href="https://sa.linkedin.com/company/elite-reach" style={styles.link}><Linkedin size={24} /></a> */}
           </div>
         </div>
       </div>
@@ -161,35 +138,14 @@ const Footer = () => {
 
       {/* Contact Information */}
       <div style={{...styles.footerGrid, ...responsiveGridStyle}}>
-        {/* Projects & general inquiries */}
         <div style={styles.footerColumn as React.CSSProperties}>
           <h3 style={styles.contactHeading}>Projects & general inquiries</h3>
           <a href="mailto:hello@elitedstudio.com" style={styles.contactLink}>hello@elitedstudio.com</a>
           <a href="tel:+966 550809669" style={styles.contactLink}>+966 550809669</a>
         </div>
-
-        {/* Job applications */}
-        {/* <div style={styles.footerColumn as React.CSSProperties}>
-          <h3 style={styles.contactHeading}>Job applications</h3>
-          <a href="mailto:hr@cuubstudio.com" style={styles.contactLink}>hr@elitedesigntudio.com</a>
-        </div> */}
-
-        {/* Marketing & PR */}
-        {/* <div style={styles.footerColumn as React.CSSProperties}>
-          <h3 style={styles.contactHeading}>Marketing & PR</h3>
-          <a href="mailto:marketing@cuubstudio.com" style={styles.contactLink}>marketing@elitedesignstudio.com</a>
-        </div> */}
-
-        {/* Start a project */}
-        {/* <div style={styles.footerColumn as React.CSSProperties}>
-          <h3 style={styles.contactHeading}>Start a project</h3>
-          <a href="#" style={styles.ctaLink}>Fill out our brief</a>
-        </div> */}
       </div>
 
       <hr style={styles.divider} />
-
-      {/* Copyright */}
       <div style={styles.copyright}>
         <p>© 2025 Elite Design Studio. All rights reserved.</p>
       </div>

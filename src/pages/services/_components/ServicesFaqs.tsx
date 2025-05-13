@@ -2,6 +2,7 @@
 import type React from "react"
 import { useState } from "react"
 import { Plus, Minus } from "lucide-react"
+import { Link } from "react-router-dom"
 
 // Define the types for our FAQ items
 interface FAQItem {
@@ -62,10 +63,10 @@ const ServicesFAQ: React.FC<ServicesFAQProps> = ({
       </div>
 
       <div className="services-faq-unique-actions">
-        <button className="services-faq-unique-button services-faq-unique-primary" onClick={onSendMessage}>
+        <Link to={'/contact'} className="services-faq-unique-button services-faq-unique-primary" onClick={onSendMessage}>
           <span className="services-faq-unique-button-icon"></span>
           SEND A MESSAGE
-        </button>
+        </Link>
         <button className="services-faq-unique-button services-faq-unique-secondary" onClick={onScheduleCall}>
           <span className="services-faq-unique-button-icon"></span>
           SCHEDULE A CALL

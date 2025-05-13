@@ -1,5 +1,3 @@
-"use client"
-
 import type React from "react"
 import { useEffect, useRef, useState } from "react"
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
@@ -16,10 +14,8 @@ const MainBoxAnimation = () => {
   const [randomSeed, setRandomSeed] = useState({ x: 0.5, y: 0.7, z: 0.3 })
   const [isMobile, setIsMobile] = useState(false)
 
-  // Text content for the animations
   const headingTexts = ["Concept", "Visuals", "Vision", "Animation", "Mood"]
 
-  // Function to update bounds
   const updateBounds = (ref: React.RefObject<HTMLDivElement>, setBounds: Function) => {
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect()
@@ -31,29 +27,22 @@ const MainBoxAnimation = () => {
     }
   }
 
-  // Update box size based on screen width
   useEffect(() => {
     const updateBoxSize = () => {
       const width = window.innerWidth
-      setIsMobile(width < 768) // Set mobile state
+      setIsMobile(width < 768)
 
       if (width < 480) {
-        // Small mobile
         setBoxSize(150)
       } else if (width < 640) {
-        // Mobile
         setBoxSize(180)
       } else if (width < 768) {
-        // Small tablet
         setBoxSize(220)
       } else if (width < 1024) {
-        // Tablet
         setBoxSize(240)
       } else if (width < 1280) {
-        // Small desktop
         setBoxSize(280)
       } else {
-        // Desktop
         setBoxSize(300)
       }
     }
@@ -74,9 +63,7 @@ const MainBoxAnimation = () => {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  // Generate new random rotation values at intervals during scroll
   useEffect(() => {
-    // Change random seed every 10% of scroll progress
     const progressThreshold = Math.floor(scrollProgress * 10)
 
     if (progressThreshold % 2 === 0 && progressThreshold > 0) {
@@ -91,9 +78,6 @@ const MainBoxAnimation = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.pageYOffset || document.documentElement.scrollTop
-
-      // Always calculate progress when in or near the section
-      // This ensures animation works when scrolling back up
       if (currentScroll >= section2Bounds.top - 100 && currentScroll <= section2Bounds.bottom + 100) {
         const sectionHeight = section2Bounds.bottom - section2Bounds.top
         const progress = Math.min(Math.max((currentScroll - section2Bounds.top) / sectionHeight, 0), 1)
@@ -116,10 +100,7 @@ const MainBoxAnimation = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [section2Bounds, sectionlastBounds])
 
-  // Always visible
   const box1Visibility = 1
-
-  // Random rotation based on scroll progress and random seed
   const boxRotationX = useTransform(() => scrollProgress * 360 * randomSeed.x)
   const boxRotationY = useTransform(() => scrollProgress * 180 * randomSeed.y)
   const boxRotationZ = useTransform(() => scrollProgress * 90 * randomSeed.z)
@@ -128,7 +109,6 @@ const MainBoxAnimation = () => {
   const smoothRotationY = useSpring(boxRotationY, { stiffness: 100, damping: 30 })
   const smoothRotationZ = useSpring(boxRotationZ, { stiffness: 100, damping: 30 })
 
-  // Get responsive values based on screen size
   const getResponsiveOffset = () => {
     const width = window.innerWidth
     if (width < 480) return 100 // Small mobile
@@ -139,7 +119,6 @@ const MainBoxAnimation = () => {
     return 400 // Desktop
   }
 
-  // Get scale values based on device size
   const getScaleValues = () => {
     if (isMobile) {
       // Further reduced scale for mobile
@@ -198,7 +177,6 @@ const MainBoxAnimation = () => {
     [0, 0, -getResponsiveOffset() * 0.5, -getResponsiveOffset() * 0.6],
   )
 
-  // Text 3: Appears center, moves to bottom-left
   const text3Opacity = useTransform(scrollY, [2900, 3200, 3500, 3800], [0, 1, 1, 1])
   const text3Scale = useTransform(
     scrollY,
@@ -216,7 +194,6 @@ const MainBoxAnimation = () => {
     [0, 0, getResponsiveOffset() * 0.5, getResponsiveOffset() * 0.6],
   )
 
-  // Text 4: Appears center, moves to bottom-right
   const text4Opacity = useTransform(scrollY, [3800, 4100, 4400, 4700], [0, 1, 1, 1])
   const text4Scale = useTransform(
     scrollY,
@@ -242,7 +219,6 @@ const MainBoxAnimation = () => {
     [scaleValues.small, scaleValues.large, isMobile ? 1.1 : 1.5, 0.7],
   )
 
-  // Calculate container size based on box size
   const containerSize = Math.max(boxSize * 3, 300)
 
   useEffect(() => {
@@ -252,12 +228,8 @@ const MainBoxAnimation = () => {
       updateBounds(sectionlastRef, setSectionlastBounds)
     }
 
-    // Initial update
     updateAllBounds()
-
-    // Update after a short delay to ensure all elements are properly rendered
     const timer = setTimeout(updateAllBounds, 500)
-
     return () => clearTimeout(timer)
   }, [])
 

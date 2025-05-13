@@ -6,7 +6,6 @@ import TestimonialCard from "../components/about/TestimonialAboutCard";
 import ServicesAnimation from "../components/ServicesAnimation";
 
 export default function Main() {
-  
   return (
     <div className="w-full mydiv">
       <AnimatedVerticalLine />
@@ -25,13 +24,13 @@ export default function Main() {
         </video>
       </section>
 
-      <MainBoxAnimation/>
-      <ServicesAnimation/>
-      <section className="home-page-testomonial block h-[100vh]" >
-<TestimonialCard/>
+      <MainBoxAnimation />
+      <ServicesAnimation />
+      <section className="home-page-testomonial block h-[100vh]">
+        <TestimonialCard />
       </section>
-      
-      <ServicesBoxSection/>
+
+      <ServicesBoxSection />
     </div>
   );
 }

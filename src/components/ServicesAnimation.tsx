@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 interface Section {
   id: string;
   renderingLink: string;
@@ -355,8 +356,8 @@ function SectionComponent({
                   maxWidth: "370px",
                 }}
               >
-                <a
-                  href={section.renderingLink}
+                <Link
+                  to={section.renderingLink}
                   style={{
                     textDecoration: "none",
                   }}
@@ -395,7 +396,7 @@ function SectionComponent({
                       <ArrowUpRight size={isMobile ? 24 : 28} />
                     </motion.span>
                   </motion.h2>
-                </a>
+                </Link>
 
                 {/* Button - Now with timing adjusted to section transitions */}
                 <motion.div
@@ -458,6 +459,7 @@ function SectionComponent({
                     />
 
                     {/* Button text */}
+                   <Link to={'/projects'}>
                     <motion.div
                       style={{
                         position: "relative",
@@ -478,6 +480,7 @@ function SectionComponent({
                         SEE MORE PROJECTS
                       </motion.span>
                     </motion.div>
+                   </Link>
                   </motion.a>
                 </motion.div>
               </div>
