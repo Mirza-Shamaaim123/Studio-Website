@@ -110,7 +110,6 @@ function SectionComponent({
   section,
   index,
   isMobile,
-  totalSections,
 }: SectionComponentProps) {
   const [hovered, setHovered] = useState(false);
   const [buttonHovered, setButtonHovered] = useState(false);
