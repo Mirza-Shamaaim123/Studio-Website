@@ -91,17 +91,24 @@ const MainBoxAnimation = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.pageYOffset || document.documentElement.scrollTop
-      const section =
-        currentScroll >= section2Bounds.top && currentScroll <= section2Bounds.bottom
-          ? section2Bounds
-          : currentScroll >= sectionlastBounds.top && currentScroll <= sectionlastBounds.bottom
-            ? sectionlastBounds
-            : null
 
-      if (section) {
-        const sectionHeight = section.bottom - section.top
-        const progress = Math.min(Math.max((currentScroll - section.top) / sectionHeight, 0), 1)
+      // Always calculate progress when in or near the section
+      // This ensures animation works when scrolling back up
+      if (currentScroll >= section2Bounds.top - 100 && currentScroll <= section2Bounds.bottom + 100) {
+        const sectionHeight = section2Bounds.bottom - section2Bounds.top
+        const progress = Math.min(Math.max((currentScroll - section2Bounds.top) / sectionHeight, 0), 1)
         setScrollProgress(progress)
+      } else if (currentScroll >= sectionlastBounds.top - 100 && currentScroll <= sectionlastBounds.bottom + 100) {
+        const sectionHeight = sectionlastBounds.bottom - sectionlastBounds.top
+        const progress = Math.min(Math.max((currentScroll - sectionlastBounds.top) / sectionHeight, 0), 1)
+        setScrollProgress(progress)
+      }
+
+      // Reset animation when completely out of view
+      if (currentScroll < section2Bounds.top - 200 && currentScroll < sectionlastBounds.top - 200) {
+        setScrollProgress(0)
+        // Reset random seed to ensure animation is fresh when scrolling back
+        setRandomSeed({ x: 0.5, y: 0.7, z: 0.3 })
       }
     }
 
@@ -113,9 +120,9 @@ const MainBoxAnimation = () => {
   const box1Visibility = 1
 
   // Random rotation based on scroll progress and random seed
-  const boxRotationX = useTransform(() => scrollProgress * 720 * randomSeed.x)
-  const boxRotationY = useTransform(() => scrollProgress * 360 * randomSeed.y)
-  const boxRotationZ = useTransform(() => scrollProgress * 180 * randomSeed.z)
+  const boxRotationX = useTransform(() => scrollProgress * 360 * randomSeed.x)
+  const boxRotationY = useTransform(() => scrollProgress * 180 * randomSeed.y)
+  const boxRotationZ = useTransform(() => scrollProgress * 90 * randomSeed.z)
 
   const smoothRotationX = useSpring(boxRotationX, { stiffness: 100, damping: 30 })
   const smoothRotationY = useSpring(boxRotationY, { stiffness: 100, damping: 30 })
@@ -135,10 +142,10 @@ const MainBoxAnimation = () => {
   // Get scale values based on device size
   const getScaleValues = () => {
     if (isMobile) {
-      // Reduced scale for mobile
+      // Further reduced scale for mobile
       return {
         small: 0.6,
-        large: 1.2,
+        large: 1.0, // Reduced from 1.2 to 1.0
         medium: 0.8,
         final: 0.5,
       }
@@ -146,7 +153,7 @@ const MainBoxAnimation = () => {
       // Original scale for desktop
       return {
         small: 0.5,
-        large: 2,
+        large: 1.8, // Reduced from 2.0 to 1.8
         medium: 0.8,
         final: 0.5,
       }
@@ -237,6 +244,22 @@ const MainBoxAnimation = () => {
 
   // Calculate container size based on box size
   const containerSize = Math.max(boxSize * 3, 300)
+
+  useEffect(() => {
+    // Function to update all bounds
+    const updateAllBounds = () => {
+      updateBounds(section2Ref, setSection2Bounds)
+      updateBounds(sectionlastRef, setSectionlastBounds)
+    }
+
+    // Initial update
+    updateAllBounds()
+
+    // Update after a short delay to ensure all elements are properly rendered
+    const timer = setTimeout(updateAllBounds, 500)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <section

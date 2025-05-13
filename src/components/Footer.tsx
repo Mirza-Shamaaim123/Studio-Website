@@ -114,7 +114,7 @@ const Footer = () => {
           <h2 style={styles.footerHeading}>Services</h2>
           <ul style={styles.footerList as React.CSSProperties}>
             <li><a href="/services/animation/" style={styles.link}>Animations</a></li>
-            <li><a href="/services/video-productions/" style={styles.link}>Video Production</a></li>
+            <li><a href="/services/video-production/" style={styles.link}>Video Production</a></li>
             <li><a href="/services/image-creation/" style={styles.link}>Image Creations</a></li>
            
 
