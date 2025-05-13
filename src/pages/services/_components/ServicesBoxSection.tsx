@@ -1,318 +1,86 @@
-
-
-import { useEffect, useRef, useState } from "react"
-import { motion, useScroll, useTransform, useSpring } from "framer-motion"
+import { useRef } from "react"
+import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
 const ServicesBoxSection = () => {
-  const { scrollY } = useScroll()
-  const [fade, setFade] = useState(false)
+  const sectionRef = useRef<HTMLDivElement>(null)
 
-  const section2Ref = useRef<HTMLDivElement>(null)
-  const sectionlastRef = useRef<HTMLDivElement>(null)
-  const section3Ref = useRef<HTMLDivElement>(null)
+  const cubeSize = "clamp(150px, 30vw, 300px)"
+  const half = "50%"
 
-  const [section2Bounds, setSection2Bounds] = useState({ top: 0, bottom: 0 })
-  const [sectionlastBounds, setSectionlastBounds] = useState({
-    top: 0,
-    bottom: 0,
-  })
-  const [section3Bounds, setSection3Bounds] = useState({ top: 0, bottom: 0 })
-  const [scrollProgress, setScrollProgress] = useState(0)
-  const [boxSize, setBoxSize] = useState(300)
-  const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 0)
-
-  const headingTexts = [
-    "Concept",
-    "Mood",
-    "Vision",
-    "Animation",
-    "Visuals",
-    "Storyboard",
-    "Production",
-    "Post",
-    "Graphics",
-    "Ready to Start?  ",
+  const faces = [
+    `translateZ(${half})`,
+    `translateZ(-${half}) rotateY(180deg)`,
+    `translateX(${half}) rotateY(90deg)`,
+    `translateX(-${half}) rotateY(-90deg)`,
+    `translateY(-${half}) rotateX(90deg)`,
+    `translateY(${half}) rotateX(-90deg)`,
   ]
-
-  // Update window width on resize
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth)
-
-      // Adjust box size based on screen width
-      if (window.innerWidth < 640) {
-        // mobile
-        setBoxSize(150)
-      } else if (window.innerWidth < 1024) {
-        // tablet
-        setBoxSize(200)
-      } else {
-        // desktop
-        setBoxSize(300)
-      }
-    }
-
-    handleResize() // Set initial size
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
-  // Update section bounds on resize and initial load
-  useEffect(() => {
-    const updateBounds = () => {
-      if (section2Ref.current) {
-        const rect = section2Ref.current.getBoundingClientRect()
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-        setSection2Bounds({
-          top: rect.top + scrollTop,
-          bottom: rect.bottom + scrollTop,
-        })
-      }
-
-      if (section3Ref.current) {
-        const rect = section3Ref.current.getBoundingClientRect()
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-        setSection3Bounds({
-          top: rect.top + scrollTop,
-          bottom: rect.bottom + scrollTop,
-        })
-      }
-    }
-
-    updateBounds()
-    window.addEventListener("resize", updateBounds)
-    return () => window.removeEventListener("resize", updateBounds)
-  }, [])
-
-  useEffect(() => {
-    const updateBounds = () => {
-      if (sectionlastRef.current) {
-        const rect = sectionlastRef.current.getBoundingClientRect()
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-        setSectionlastBounds({
-          top: rect.top + scrollTop,
-          bottom: rect.bottom + scrollTop,
-        })
-      }
-    }
-
-    updateBounds()
-    window.addEventListener("resize", updateBounds)
-    return () => window.removeEventListener("resize", updateBounds)
-  }, [])
-
-  // Track scroll progress within section 2
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.pageYOffset || document.documentElement.scrollTop
-
-      if (currentScroll >= section2Bounds.top && currentScroll <= section2Bounds.bottom) {
-        // Calculate progress through section 2 (0 to 1)
-        const sectionHeight = section2Bounds.bottom - section2Bounds.top
-        const scrollPositionInSection = currentScroll - section2Bounds.top
-        const progress = Math.min(Math.max(scrollPositionInSection / sectionHeight, 0), 1)
-        setScrollProgress(progress)
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [section2Bounds])
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.pageYOffset || document.documentElement.scrollTop
-
-      if (currentScroll >= sectionlastBounds.top && currentScroll <= sectionlastBounds.bottom) {
-        // Calculate progress through section 2 (0 to 1)
-        const sectionHeight = sectionlastBounds.bottom - sectionlastBounds.top
-        const scrollPositionInSection = currentScroll - sectionlastBounds.top
-        const progress = Math.min(Math.max(scrollPositionInSection / sectionHeight, 0), 1)
-        setScrollProgress(progress)
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [sectionlastBounds])
-
-  // Box entrance animation
-  const boxEntranceY = useTransform(scrollY, [section2Bounds.top - 300, section2Bounds.top - 200], [0, 0])
-
-  const boxEntranceOpacity = useTransform(scrollY, [section2Bounds.top - 300, section2Bounds.top], [0, 1])
-
-  const box1Visibility = useTransform(scrollY, (value) => {
-    if (value >= 200) {
-      return 1
-    } else {
-      return 0 // No longer visible
-    }
-  })
-
-  // Box rotation transforms based on section 2 progress
-  const boxRotationX = useTransform(() => scrollProgress * 720)
-  const boxRotationY = useTransform(() => scrollProgress * 360)
-  const boxRotationZ = useTransform(() => scrollProgress * 180)
-
-  // Smooth the rotations
-  const smoothRotationX = useSpring(boxRotationX, {
-    stiffness: 100,
-    damping: 30,
-  })
-
-  const smoothRotationY = useSpring(boxRotationY, {
-    stiffness: 100,
-    damping: 30,
-  })
-
-  const smoothRotationZ = useSpring(boxRotationZ, {
-    stiffness: 100,
-    damping: 30,
-  })
-
-  // Calculate half box size for 3D transformations
-  const halfBoxSize = boxSize / 2
 
   return (
     <section
-      ref={sectionlastRef}
-      style={{
-        borderRadius: "30px 30px 0px 0px",
-      }}
-      className="section6 drop-us-line w-full pt-32 z-[350] h-screen flex justify-center text-white"
+      ref={sectionRef}
+      className="section6 h-screen w-full pt-32 flex justify-center items-start z-[350] text-white"
     >
-      <div className="relative w-full h-full flex justify-center items-start">
-        {/* Container that holds both the box and text, making them stick together */}
+      <motion.div
+        className="sticky top-0 w-full max-w-[800px] h-[800px] flex justify-center items-center"
+      >
+        {/* Random moving cube */}
         <motion.div
-          className="relative w-full max-w-[800px] h-[800px] flex items-center justify-center px-4"
+          className="relative"
           style={{
-            position: "sticky",
-            top: "0%",
-            opacity: box1Visibility,
+            width: cubeSize,
+            height: cubeSize,
+            transformStyle: "preserve-3d",
+          }}
+          animate={{
+    x: ["0%", "-15%", "10%", "0%"],
+    y: ["0%", "10%", "-10%", "0%"],
+    rotateX: [0, 90, 180, 0],
+    rotateY: [0, 180, 360, 0],
+    rotateZ: [0, 45, -45, 0],
+          }}
+          transition={{
+    duration: 12,
+            repeat: Infinity,
+    repeatType: "mirror",
+    ease: "easeInOut",
           }}
         >
-          {/* 3D Box */}
+          {faces.map((transform, idx) => (
+            <motion.div
+              key={idx}
+              className="absolute"
+              style={{
+                width: "100%",
+                height: "100%",
+                background: "#ff4438", // red box
+                // backfaceVisibility: "visible",
+                transform,
+                
+              }}
+            />
+          ))}
+        </motion.div>
+
+        {/* Text overlay */}
+        <div className="absolute inset-0 flex items-center justify-center z-10">
           <motion.div
-            className="relative"
+            className="text-center px-4 mix-blend-difference text-white"
             style={{
-              width: boxSize,
-              height: boxSize,
-              transformStyle: "preserve-3d",
-              rotateX: smoothRotationX,
-              rotateY: smoothRotationY,
-              rotateZ: smoothRotationZ,
-              y: boxEntranceY,
+              scale: 1.5,
+              textShadow: "0 0 20px rgba(0,0,0,0.5)",
             }}
           >
-            {/* Front face */}
-            <motion.div
-              className="absolute border-0 border-white/10"
-              style={{
-                width: boxSize,
-                height: boxSize,
-                background: "#000000 ",
-                transformStyle: "preserve-3d",
-                backfaceVisibility: "visible",
-                transform: `translateZ(${halfBoxSize}px)`,
-                boxShadow: "0 0 50px rgba(129, 102, 158, 0.2)",
-              }}
-            />
-
-            {/* Back face */}
-            <motion.div
-              className="absolute border-0 border-white/10"
-              style={{
-                width: boxSize,
-                height: boxSize,
-                background: "#000000 ",
-                transformStyle: "preserve-3d",
-                backfaceVisibility: "visible",
-                transform: `translateZ(-${halfBoxSize}px) rotateY(180deg)`,
-                boxShadow: "0 0 50px rgba(129, 102, 158, 0.2)",
-              }}
-            />
-
-            {/* Right face */}
-            <motion.div
-              className="absolute border-0 border-white/10"
-              style={{
-                width: boxSize,
-                height: boxSize,
-                background: "#000000 ",
-                transformStyle: "preserve-3d",
-                backfaceVisibility: "visible",
-                transform: `translateX(${halfBoxSize}px) rotateY(90deg)`,
-                boxShadow: "0 0 50px rgba(129, 102, 158, 0.2)",
-              }}
-            />
-
-            {/* Left face */}
-            <motion.div
-              className="absolute border-0 border-white/10"
-              style={{
-                width: boxSize,
-                height: boxSize,
-                background: "#000000 ",
-                transformStyle: "preserve-3d",
-                backfaceVisibility: "visible",
-                transform: `translateX(-${halfBoxSize}px) rotateY(-90deg)`,
-                boxShadow: "0 0 50px rgba(129, 102, 158, 0.2)",
-              }}
-            />
-
-            {/* Top face */}
-            <motion.div
-              className="absolute border-0 border-white/10"
-              style={{
-                width: boxSize,
-                height: boxSize,
-                background: "#000000 ",
-                transformStyle: "preserve-3d",
-                backfaceVisibility: "visible",
-                transform: `translateY(-${halfBoxSize}px) rotateX(90deg)`,
-                boxShadow: "0 0 50px rgba(129, 102, 158, 0.2)",
-              }}
-            />
-
-            {/* Bottom face */}
-            <motion.div
-              className="absolute border-0 border-white/10"
-              style={{
-                width: boxSize,
-                height: boxSize,
-                background: "#000000",
-                transformStyle: "preserve-3d",
-                backfaceVisibility: "visible",
-                transform: `translateY(${halfBoxSize}px) rotateX(-90deg)`,
-                boxShadow: "0 0 50px rgba(129, 102, 158, 0.2)",
-              }}
-            />
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ready-text">
+              Ready to Start?{" "}
+              <Link to="/contact" className="border-b-[4px] cursor-pointer">
+                Drop Us a Line
+              </Link>
+            </h1>
           </motion.div>
-
-          {/* Text Overlays positioned on top of the box */}
-          <div style={{ borderRadius: "30px" }} className="absolute inset-0 flex items-center justify-center z-10">
-            <motion.div
-              className="absolute text-center px-4"
-              style={{
-                opacity: 1,
-                scale: windowWidth < 640 ? 1 : windowWidth < 1024 ? 1.5 : 2,
-                color: "white",
-                mixBlendMode: "difference",
-                textShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
-                zIndex: 20,
-              }}
-            >
-              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-full sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] ready-text">
-                {headingTexts[9]}
-                <Link to="/contact" className="hover:border-b-[4px]  cursor-pointer">
-                    Drop Us a Line
-                </Link>
-              </h1>
-            </motion.div>
-          </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   )
 }

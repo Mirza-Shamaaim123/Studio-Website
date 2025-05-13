@@ -10,19 +10,20 @@ const cardData = [
   {
     title: "Strategy",
     description:
-      "To ensure a strong basis for achieving success, our initial approach in each project involves recognizing the business goals and obstacles. Through collaboration with our partner, we will explore both the evident and obscure elements to craft efficient strategies.",
+      "We begin every animation project by identifying your objectives, audience, and key messages. Whether it's 2D, 3D, or whiteboard animation, this strategic foundation ensures the visual storytelling aligns with your brand voice and communicates effectively.",
   },
   {
     title: "Positioning",
     description:
-      "Building upon the insights obtained during the initial phase, we enter the ideation stage. Drawing on the collective expertise of our team, we polish and define the project's stance and vision, culminating in the development of a visually representative solution.",
+      "Based on the strategic groundwork, we define the animation style and tone that best suits your brand. From sleek 3D animations to playful 2D or educational whiteboard styles, we position your message to stand out and engage the intended audience with clarity and purpose.",
   },
   {
     title: "Creative",
     description:
-      "During this phase, we will utilize the analysis and assigned tasks to craft a visual language that deeply engages the audience with the project's meanings and ideas. This creative approach harnesses the project's potential to deliver a compelling and immersive experience.",
+      "This phase transforms your ideas into compelling animations. Our creative team crafts visually rich 2D, 3D, and whiteboard animations using storytelling, motion graphics, and design expertise—bringing your vision to life with stunning results.",
   },
 ];
+
 const projectImages = [
   "https://images.prismic.io/cuub/Z0R6yq8jQArT1RfO_2.jpg?ixlib=gatsbyFP&auto=format%2Ccompress&fit=max&q=75&w=920",
   "https://images.prismic.io/cuub/Z0R6zq8jQArT1RfP_3.jpg?ixlib=gatsbyFP&auto=format%2Ccompress&fit=max&q=75&w=920",
@@ -34,28 +35,22 @@ const crouselContent = {
   steps: [
     {
       number: "01",
-      title: "Fill the brief",
+      title: "3d Animation",
       description:
-        "Send us a completed short brief along with details about your project. It will help us formulate an offer for you.",
+        "We are driven by creativity. We create innovative things to help you achieve better results and consolidate yourself in the market.",
     },
     {
       number: "02",
-      title: "Review the proposal",
+      title: "2D Animation",
       description:
-        "We'll send you a detailed proposal with timeline and cost estimates for your project.",
+        "We are driven by creativity. We create innovative things to help you achieve better results and consolidate yourself in the market.",
     },
     {
       number: "03",
-      title: "Provide feedback",
+      title: "White board animation",
       description:
-        "Review our initial concepts and provide feedback to ensure we're aligned with your vision.",
-    },
-    {
-      number: "04",
-      title: "Receive final delivery",
-      description:
-        "Get your high-quality 3D visualizations ready for your marketing and presentation needs.",
-    },
+        "We are driven by creativity. We create innovative things to help you achieve better results and consolidate yourself in the market.",
+    }
   ],
 };
 
@@ -66,40 +61,38 @@ const crouselImages = [
   "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2835&auto=format&fit=crop", // Final delivery visualization for step 4
 ];
 
-
- const faqData = [
+const faqData = [
     {
-      question: "How complicated is the process?",
+      question: "How complicated is the animation process?",
       answer:
-        "With years of experience, we have made this process for our clients as simple as possible. Thanks to our skillful account manager we deliver top-class customer experiences with personalized self-service. Our comprehensible workflow enables customers to review, comment, and get regular updates on the progress.",
+        "With years of expertise in animation, we’ve streamlined the process to be as simple as possible for our clients. Our dedicated account managers ensure a seamless experience with personalized support, clear workflows, and regular updates, allowing you to review and provide feedback effortlessly.",
     },
     {
-      question: "Is my data safe with you?",
+      question: "Is my animation project data safe with you?",
       answer:
-        "Yes, we take data security very seriously. All your information is encrypted and stored securely following industry best practices and compliance standards.",
+        "Absolutely, we prioritize data security. All project files, including animation assets and client information, are encrypted and stored securely, adhering to industry-leading standards and compliance protocols.",
     },
     {
-      question: "How many projects can you do at the same time?",
+      question: "How many animation projects can you handle at once?",
       answer:
-        "We have a team of professionals that allows us to handle multiple projects simultaneously without compromising on quality or timelines.",
+        "Our skilled team of animators and designers enables us to manage multiple animation projects concurrently while maintaining high-quality output and meeting deadlines.",
     },
     {
-      question: "What is your turnaround time?",
+      question: "What is your turnaround time for animation projects?",
       answer:
-        "Our turnaround time varies depending on the complexity of the project, but we always strive to deliver within the agreed timeframe.",
+        "Turnaround times depend on the complexity and scope of the animation project. We work closely with you to establish realistic timelines and deliver within the agreed schedule.",
     },
     {
-      question: "How will I communicate with a team throughout the process?",
+      question: "How will I communicate with the animation team during the project?",
       answer:
-        "We provide multiple communication channels including email, phone, and our project management system where you can track progress and communicate with the team.",
+        "We offer various communication channels, including email, phone, and our project management platform, where you can monitor progress, provide feedback, and collaborate directly with our animation team.",
     },
     {
-      question: "What files do I need to send to start a project?",
+      question: "What files do I need to provide to start an animation project?",
       answer:
-        "The required files depend on the nature of your project. Our team will guide you through the specific requirements during the initial consultation.",
+        "The required files vary based on your animation project’s needs, such as storyboards, scripts, or branding assets. Our team will provide detailed guidance on specific requirements during the initial consultation.",
     },
-  ]
-
+];
   const handleSendMessage = () => {
     console.log("Send message clicked")
     // Implement your send message functionality here
@@ -109,18 +102,18 @@ const crouselImages = [
     console.log("Schedule call clicked")
     // Implement your schedule call functionality here
   }
-   const partnersData = [
-    { name: "KFK", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "KFK Logo" },
-    { name: "DKO", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "DKO Logo" },
-    { name: "Milieu", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Milieu Logo" },
-    { name: "Assemble", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Assemble Logo" },
-    { name: "PVA", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "PVA Logo" },
-    { name: "FIELDWORK", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "FIELDWORK Logo" },
-    { name: "MAIN PROJECTS", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "MAIN PROJECTS Logo" },
-    { name: "MHNDU", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "MHNDU Logo" },
-    { name: "PS", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "PS Logo" },
-    { name: "Eldridge Anderson", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Eldridge Anderson Logo" },
-  ]
+  const partnersData = [
+    { name: "KFK", logo: "/images/brands/brand-1.avif", alt: "KFK Logo" },
+    { name: "DKO", logo: "/images/brands/brand-2.avif", alt: "DKO Logo" },
+    { name: "Milieu", logo: "/images/brands/brand-3.avif", alt: "Milieu Logo" },
+    { name: "Assemble", logo: "/images/brands/brand-4.avif", alt: "Assemble Logo" },
+    { name: "PVA", logo: "/images/brands/brand-5.avif", alt: "PVA Logo" },
+    { name: "FIELDWORK", logo: "/images/brands/brand-6.avif", alt: "FIELDWORK Logo" },
+    { name: "MAIN PROJECTS", logo: "/images/brands/brand-7.avif", alt: "MAIN PROJECTS Logo" },
+    { name: "MHNDU", logo: "/images/brands/brand-8.avif", alt: "MHNDU Logo" },
+    { name: "PS", logo: "/images/brands/brand-9.avif", alt: "PS Logo" },
+    { name: "Eldridge Anderson", logo: "/images/brands/brand-10.avif", alt: "Eldridge Anderson Logo" },
+];
 
 const AnimationServices = () => {
   return (

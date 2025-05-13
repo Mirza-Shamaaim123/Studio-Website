@@ -32,7 +32,7 @@ footer {
 }
 .section2 {
   background: #000000;
-  height: 7000px;
+  height: 5500px;
 }
 .section3 {
   background: #2ecc71;
@@ -48,7 +48,7 @@ footer {
 }
 .section6 {
   background: #000000;
-  height: 1500px;
+  height: 100vh;
 }
 
 .bg-color {
@@ -213,6 +213,14 @@ footer {
 
   .navbar-link:hover {
     opacity: 0.75;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-box-five-texts{
+    font-size: 40px !important;
+  }
+  .section2{
+    height: 5500px !important;
   }
 }
 

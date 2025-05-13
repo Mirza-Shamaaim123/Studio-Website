@@ -3,6 +3,7 @@ import "./about.css";
 import RotatingCube from "../components/RotatingCube";
 import TestimonialAboutCard from "../components/about/TestimonialAboutCard";
 import JobListings from "../components/about/Job-listening";
+import { Link } from "react-router-dom";
 
 const teamMembers = [
   {
@@ -124,24 +125,24 @@ const AboutUsPage: React.FC = () => {
             <div className="services-grid">
               <ul className="services-list">
                 <li>
-                  <a href="#">Animation</a>
+                  <Link to="/services/animation/">Animation</Link>
                 </li>
                 <li>
-                  <a href="#">Video Productions</a>
+                  <Link to="/services/video-production/">Video Productions</Link>
                 </li>
                 <li>
-                  <a href="#">Image Creation</a>
+                  <Link to="/services/image-creation/">Image Creation</Link>
                 </li>
               </ul>
               <ul className="services-list">
                 <li>
-                  <a href="#">Audio Services</a>
+                  <Link to="/services/audio-production/">Audio Services</Link>
                 </li>
                 <li>
-                  <a href="#">Time-lapse Video</a>
+                  <Link to="/services/time-lapse-video/">Time-lapse Video</Link>
                 </li>
                 <li>
-                  <a href="#">Branding</a>
+                  <Link to="/services/branding/">Branding</Link>
                 </li>
               </ul>
             </div>

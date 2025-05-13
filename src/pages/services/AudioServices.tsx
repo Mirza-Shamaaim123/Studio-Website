@@ -11,19 +11,20 @@ const cardData = [
   {
     title: "Strategy",
     description:
-      "To ensure a strong basis for achieving success, our initial approach in each project involves recognizing the business goals and obstacles. Through collaboration with our partner, we will explore both the evident and obscure elements to craft efficient strategies.",
+      "At the core of our audio services is a strategic foundation. We begin by understanding your brand's voice, target audience, and communication goals. This allows us to identify opportunities and challenges, enabling the development of a tailored audio approach that aligns with your brand's identity.",
   },
   {
     title: "Positioning",
     description:
-      "Building upon the insights obtained during the initial phase, we enter the ideation stage. Drawing on the collective expertise of our team, we polish and define the project's stance and vision, culminating in the development of a visually representative solution.",
+      "With strategic insights in place, we define how your brand should sound in the competitive landscape. This phase focuses on shaping your sonic identity—positioning your audio assets to emotionally connect with your audience while standing out through originality and consistency.",
   },
   {
     title: "Creative",
     description:
-      "During this phase, we will utilize the analysis and assigned tasks to craft a visual language that deeply engages the audience with the project's meanings and ideas. This creative approach harnesses the project's potential to deliver a compelling and immersive experience.",
+      "Our creative phase brings your sonic identity to life. From composing custom music and designing sound effects to recording compelling voiceovers, we craft immersive audio experiences that enhance engagement, reinforce your brand message, and leave a lasting impression.",
   },
 ];
+
 const projectImages = [
   "https://images.prismic.io/cuub/Z0R6yq8jQArT1RfO_2.jpg?ixlib=gatsbyFP&auto=format%2Ccompress&fit=max&q=75&w=920",
   "https://images.prismic.io/cuub/Z0R6zq8jQArT1RfP_3.jpg?ixlib=gatsbyFP&auto=format%2Ccompress&fit=max&q=75&w=920",
@@ -69,37 +70,38 @@ const crouselImages = [
 
 
  const faqData = [
-    {
-      question: "How complicated is the process?",
-      answer:
-        "With years of experience, we have made this process for our clients as simple as possible. Thanks to our skillful account manager we deliver top-class customer experiences with personalized self-service. Our comprehensible workflow enables customers to review, comment, and get regular updates on the progress.",
-    },
-    {
-      question: "Is my data safe with you?",
-      answer:
-        "Yes, we take data security very seriously. All your information is encrypted and stored securely following industry best practices and compliance standards.",
-    },
-    {
-      question: "How many projects can you do at the same time?",
-      answer:
-        "We have a team of professionals that allows us to handle multiple projects simultaneously without compromising on quality or timelines.",
-    },
-    {
-      question: "What is your turnaround time?",
-      answer:
-        "Our turnaround time varies depending on the complexity of the project, but we always strive to deliver within the agreed timeframe.",
-    },
-    {
-      question: "How will I communicate with a team throughout the process?",
-      answer:
-        "We provide multiple communication channels including email, phone, and our project management system where you can track progress and communicate with the team.",
-    },
-    {
-      question: "What files do I need to send to start a project?",
-      answer:
-        "The required files depend on the nature of your project. Our team will guide you through the specific requirements during the initial consultation.",
-    },
-  ]
+  {
+    question: "What is Interactive Voice Recording (IVR) and how do you support it?",
+    answer:
+      "IVR is an automated phone system that interacts with callers using voice prompts. We create professional-grade IVR recordings tailored to your brand’s tone, using clear, articulate voice talents and background music if needed.",
+  },
+  {
+    question: "Can I provide my own script for audio commercials or IVR?",
+    answer:
+      "Yes, you can provide your own script. We also offer scriptwriting assistance if you need help crafting a message that aligns with your brand and converts effectively.",
+  },
+  {
+    question: "What’s your process for creating audio commercials?",
+    answer:
+      "We begin with a creative brief, finalize the script, record with professional voice talent, add background music or effects, and deliver a polished commercial ready for broadcast or digital use.",
+  },
+  {
+    question: "Do you offer custom music composing?",
+    answer:
+      "Yes, our music composers create original tracks for ads, videos, IVR systems, and more — tailored to your mood, genre, and brand identity.",
+  },
+  {
+    question: "How many revisions are included in your audio services?",
+    answer:
+      "We offer up to 2 rounds of revisions for most audio projects to ensure you’re fully satisfied with the final output.",
+  },
+  {
+    question: "How long does it take to deliver a project?",
+    answer:
+      "Most projects are completed within 3–5 business days, depending on complexity. IVRs and short commercials are usually quicker, while custom music may take slightly longer.",
+  },
+]
+
 
   const handleSendMessage = () => {
     console.log("Send message clicked")
@@ -110,18 +112,18 @@ const crouselImages = [
     console.log("Schedule call clicked")
     // Implement your schedule call functionality here
   }
-   const partnersData = [
-    { name: "KFK", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "KFK Logo" },
-    { name: "DKO", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "DKO Logo" },
-    { name: "Milieu", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Milieu Logo" },
-    { name: "Assemble", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Assemble Logo" },
-    { name: "PVA", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "PVA Logo" },
-    { name: "FIELDWORK", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "FIELDWORK Logo" },
-    { name: "MAIN PROJECTS", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "MAIN PROJECTS Logo" },
-    { name: "MHNDU", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "MHNDU Logo" },
-    { name: "PS", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "PS Logo" },
-    { name: "Eldridge Anderson", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Eldridge Anderson Logo" },
-  ]
+    const partnersData = [
+    { name: "KFK", logo: "/images/brands/brand-1.avif", alt: "KFK Logo" },
+    { name: "DKO", logo: "/images/brands/brand-2.avif", alt: "DKO Logo" },
+    { name: "Milieu", logo: "/images/brands/brand-3.avif", alt: "Milieu Logo" },
+    { name: "Assemble", logo: "/images/brands/brand-4.avif", alt: "Assemble Logo" },
+    { name: "PVA", logo: "/images/brands/brand-5.avif", alt: "PVA Logo" },
+    { name: "FIELDWORK", logo: "/images/brands/brand-6.avif", alt: "FIELDWORK Logo" },
+    { name: "MAIN PROJECTS", logo: "/images/brands/brand-7.avif", alt: "MAIN PROJECTS Logo" },
+    { name: "MHNDU", logo: "/images/brands/brand-8.avif", alt: "MHNDU Logo" },
+    { name: "PS", logo: "/images/brands/brand-9.avif", alt: "PS Logo" },
+    { name: "Eldridge Anderson", logo: "/images/brands/brand-10.avif", alt: "Eldridge Anderson Logo" },
+];
 const AudioServices = () => {
   
   return (

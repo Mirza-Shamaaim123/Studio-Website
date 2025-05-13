@@ -8,21 +8,22 @@ import PartnersSection from "./_components/ServicesPartner";
 import ServicesBoxSection from "./_components/ServicesBoxSection";
 const cardData = [
   {
-    title: "Strategy",
+    title: "Brand Strategy",
     description:
-      "To ensure a strong basis for achieving success, our initial approach in each project involves recognizing the business goals and obstacles. Through collaboration with our partner, we will explore both the evident and obscure elements to craft efficient strategies.",
+      "We begin by understanding your business goals, audience, and market landscape. This strategic foundation ensures your brand identity aligns with long-term vision and stands out in a competitive market.",
   },
   {
-    title: "Positioning",
+    title: "Visual Identity",
     description:
-      "Building upon the insights obtained during the initial phase, we enter the ideation stage. Drawing on the collective expertise of our team, we polish and define the project's stance and vision, culminating in the development of a visually representative solution.",
+      "From logos to color palettes, typography, and brand guidelines, we craft a distinctive and cohesive visual identity that captures the essence of your brand and communicates it consistently.",
   },
   {
-    title: "Creative",
+    title: "Collateral Design",
     description:
-      "During this phase, we will utilize the analysis and assigned tasks to craft a visual language that deeply engages the audience with the project's meanings and ideas. This creative approach harnesses the project's potential to deliver a compelling and immersive experience.",
+      "We design branded materials like business cards, brochures, pitch decks, social templates, and more ensuring every customer touchpoint is visually aligned and professional.",
   },
 ];
+
 const projectImages = [
   "https://images.prismic.io/cuub/Z0R6yq8jQArT1RfO_2.jpg?ixlib=gatsbyFP&auto=format%2Ccompress&fit=max&q=75&w=920",
   "https://images.prismic.io/cuub/Z0R6zq8jQArT1RfP_3.jpg?ixlib=gatsbyFP&auto=format%2Ccompress&fit=max&q=75&w=920",
@@ -67,38 +68,38 @@ const crouselImages = [
 ];
 
 
- const faqData = [
-    {
-      question: "How complicated is the process?",
-      answer:
-        "With years of experience, we have made this process for our clients as simple as possible. Thanks to our skillful account manager we deliver top-class customer experiences with personalized self-service. Our comprehensible workflow enables customers to review, comment, and get regular updates on the progress.",
-    },
-    {
-      question: "Is my data safe with you?",
-      answer:
-        "Yes, we take data security very seriously. All your information is encrypted and stored securely following industry best practices and compliance standards.",
-    },
-    {
-      question: "How many projects can you do at the same time?",
-      answer:
-        "We have a team of professionals that allows us to handle multiple projects simultaneously without compromising on quality or timelines.",
-    },
-    {
-      question: "What is your turnaround time?",
-      answer:
-        "Our turnaround time varies depending on the complexity of the project, but we always strive to deliver within the agreed timeframe.",
-    },
-    {
-      question: "How will I communicate with a team throughout the process?",
-      answer:
-        "We provide multiple communication channels including email, phone, and our project management system where you can track progress and communicate with the team.",
-    },
-    {
-      question: "What files do I need to send to start a project?",
-      answer:
-        "The required files depend on the nature of your project. Our team will guide you through the specific requirements during the initial consultation.",
-    },
-  ]
+const faqData = [
+  {
+    question: "What’s included in your branding services?",
+    answer:
+      "Our branding packages typically include brand strategy, logo design, typography, color palettes, brand guidelines, and collateral designs like business cards and brochures.",
+  },
+  {
+    question: "Can I update just one part of my brand, like the logo?",
+    answer:
+      "Yes, we can refresh or redesign specific elements like your logo or visual system without doing a full rebrand. We tailor the approach based on your needs.",
+  },
+  {
+    question: "What industries do you specialize in for branding?",
+    answer:
+      "We work across a wide range of industries including tech, health, education, lifestyle, and B2B brands. Each project is customized to suit your market and audience.",
+  },
+  {
+    question: "How long does a branding project take?",
+    answer:
+      "Most branding projects take 2–4 weeks, depending on complexity and feedback loops. We'll provide a clear timeline during the project kickoff.",
+  },
+  {
+    question: "Will I receive editable files and brand guidelines?",
+    answer:
+      "Yes, you’ll receive all final deliverables in editable formats (like .AI, .EPS, or .PSD) along with brand guidelines to ensure consistent use going forward.",
+  },
+  {
+    question: "Can you help with branded social media and presentations?",
+    answer:
+      "Absolutely. We offer collateral design services which include social media templates, pitch decks, presentation slides, and more — all aligned to your brand.",
+  },
+];
 
   const handleSendMessage = () => {
     console.log("Send message clicked")
@@ -109,18 +110,18 @@ const crouselImages = [
     console.log("Schedule call clicked")
     // Implement your schedule call functionality here
   }
-   const partnersData = [
-    { name: "KFK", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "KFK Logo" },
-    { name: "DKO", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "DKO Logo" },
-    { name: "Milieu", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Milieu Logo" },
-    { name: "Assemble", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Assemble Logo" },
-    { name: "PVA", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "PVA Logo" },
-    { name: "FIELDWORK", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "FIELDWORK Logo" },
-    { name: "MAIN PROJECTS", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "MAIN PROJECTS Logo" },
-    { name: "MHNDU", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "MHNDU Logo" },
-    { name: "PS", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "PS Logo" },
-    { name: "Eldridge Anderson", logo: "https://images.prismic.io/cuub/2a43a824-4b52-402a-823f-a7506a0d1e8d_1.png?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=134", alt: "Eldridge Anderson Logo" },
-  ]
+    const partnersData = [
+    { name: "KFK", logo: "/images/brands/brand-1.avif", alt: "KFK Logo" },
+    { name: "DKO", logo: "/images/brands/brand-2.avif", alt: "DKO Logo" },
+    { name: "Milieu", logo: "/images/brands/brand-3.avif", alt: "Milieu Logo" },
+    { name: "Assemble", logo: "/images/brands/brand-4.avif", alt: "Assemble Logo" },
+    { name: "PVA", logo: "/images/brands/brand-5.avif", alt: "PVA Logo" },
+    { name: "FIELDWORK", logo: "/images/brands/brand-6.avif", alt: "FIELDWORK Logo" },
+    { name: "MAIN PROJECTS", logo: "/images/brands/brand-7.avif", alt: "MAIN PROJECTS Logo" },
+    { name: "MHNDU", logo: "/images/brands/brand-8.avif", alt: "MHNDU Logo" },
+    { name: "PS", logo: "/images/brands/brand-9.avif", alt: "PS Logo" },
+    { name: "Eldridge Anderson", logo: "/images/brands/brand-10.avif", alt: "Eldridge Anderson Logo" },
+];
 const BrandingServices = () => {
   return (
      <>
