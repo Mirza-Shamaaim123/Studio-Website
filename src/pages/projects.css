@@ -137,4 +137,10 @@
        justify-content: center;
        text-align: center;
     }
+    .title-section{
+            margin: 26% 0px !important;
+    }
+    .title-section .description{
+        padding: 20px;
+    }
 }

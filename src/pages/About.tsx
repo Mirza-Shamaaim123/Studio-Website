@@ -68,7 +68,7 @@ const AboutUsPage: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <RotatingCube />
+             <RotatingCube isScrollControlled={false} /> 
             <div className="hero-text">
               <motion.h1
                 className="hero-title"
