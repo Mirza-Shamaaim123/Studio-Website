@@ -78,7 +78,7 @@ export default function Header() {
                   Animation
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
-                <Link to="/services/video-productions" className="dropdown-item">
+                <Link to="/services/video-production" className="dropdown-item">
                   Video Productions
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
@@ -145,7 +145,7 @@ export default function Header() {
                   Animation
                   <ArrowRight className="service-link-icon" size={14} />
                 </Link>
-                <Link to="/services/video-productions" className="mobile-menu-service-link" onClick={toggleMenu}>
+                <Link to="/services/video-production" className="mobile-menu-service-link" onClick={toggleMenu}>
                   Video Productions
                   <ArrowRight className="service-link-icon" size={14} />
                 </Link>
