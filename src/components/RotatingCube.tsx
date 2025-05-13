@@ -105,7 +105,6 @@ export default function RotatingCube({ isScrollControlled }: RotatingCubeProps) 
               top: `translateY(-${halfSize}px) rotateX(90deg)`,
               bottom: `translateY(${halfSize}px) rotateX(-90deg)`,
             }[face],
-            boxShadow: "0 0 20px rgba(255, 68, 56, 0.6)",
           }}
         />
       ))}
