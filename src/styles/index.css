@@ -475,3 +475,8 @@ footer {
   margin-right:10px ;
   font-size: 70px;
 }
+@media screen and (max-width:600px) {
+  .SeeingisExp{
+    font-size: 50px;
+  }
+}
