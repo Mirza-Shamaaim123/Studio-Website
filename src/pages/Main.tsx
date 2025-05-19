@@ -11,18 +11,16 @@ export default function Main() {
     <div className="w-full mydiv">
       <AnimatedVerticalLine />
       <section className="w-full h-screen relative">
-        <video
-          className="w-full fixed top-0 h-screen object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source
-            src="/public/home-video.mp4"
-            type="video/mp4"
-          />
-        </video>
+       <video
+  className="w-full fixed top-0 h-screen object-cover"
+  autoPlay
+  muted
+  loop
+  playsInline
+>
+  <source src="/home-video.mp4" type="video/mp4" />
+</video>
+
       </section>
 
       <MainBoxAnimation />
