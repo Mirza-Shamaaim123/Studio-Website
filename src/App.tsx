@@ -26,6 +26,8 @@ import DroneServices from './pages/services/DroneServices';
 import ArialServices from './pages/services/ArialServices';
 import WebDevelopment from './pages/services/WebDevelopment';
 import DigitalMarketing from './pages/services/DigitalMarketing';
+import GrapicDesgining from './pages/services/GrapicDesgining';
+import ScrollToTop from './components/ScrolltoTop';
 
 
 const theme = {
@@ -41,6 +43,7 @@ function App() {
     <ThemeProvider theme={theme}>
        <GlobalStyle />
       <Router>
+        <ScrollToTop/>
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
@@ -58,7 +61,8 @@ function App() {
           <Route path="/services/drone-services/" element={<DroneServices />} /> 
           <Route path="/services/arial-services/" element={<ArialServices />} /> 
           <Route path="/services/web-development/" element={<WebDevelopment />} />
-             <Route path="/services/digital-marketing/" element={<DigitalMarketing />} /> 
+          <Route path="/services/digital-marketing/" element={<DigitalMarketing />} /> 
+          <Route path="/services/grapic-desgining/" element={<GrapicDesgining />} /> 
           <Route path="/services-animate/" element={<PinnedImageScrollSection />} />
         </Routes>
         <Footer />

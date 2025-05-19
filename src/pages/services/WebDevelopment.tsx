@@ -54,42 +54,42 @@ const crouselContent = {
 };
 
 const crouselImages = [
-  "/public/services images/front end.webp", // Building image for step 1
-  "/public/Services images/woocommerce.jpg", // Different building for step 2
-  "/public/Services images/Ai integration.jpg", // Interior visualization for step 3
+  "/images/Servicesimages/front end.webp", // Building image for step 1
+  "/images/Servicesimages/woocommerce.jpg", // Different building for step 2
+  "/images/Servicesimages/Ai integration.jpg", // Interior visualization for step 3
   "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2835&auto=format&fit=crop", // Final delivery visualization for step 4
 ];
 
 const faqData = [
     {
-      question: "How complicated is the animation process?",
+      question: "What types of websites do you develop?",
       answer:
-        "With years of expertise in animation, we’ve streamlined the process to be as simple as possible for our clients. Our dedicated account managers ensure a seamless experience with personalized support, clear workflows, and regular updates, allowing you to review and provide feedback effortlessly.",
+        "We create various websites including business sites, e-commerce stores, portfolios, blogs, and custom web applications.",
     },
     {
-      question: "Is my animation project data safe with you?",
+      question: "Which technologies do you use for web development?",
       answer:
-        "Absolutely, we prioritize data security. All project files, including animation assets and client information, are encrypted and stored securely, adhering to industry-leading standards and compliance protocols.",
+        "We use HTML, CSS, JavaScript, React, Angular, Node.js, PHP, WordPress, WooCommerce, and more based on project needs",
     },
     {
-      question: "How many animation projects can you handle at once?",
+      question: "How long does it take to develop a website?",
       answer:
-        "Our skilled team of animators and designers enables us to manage multiple animation projects concurrently while maintaining high-quality output and meeting deadlines.",
+        "Typically, website development takes 4 to 8 weeks depending on complexity and client requirements.",
     },
     {
-      question: "What is your turnaround time for animation projects?",
+      question: "Can you design mobile-friendly and responsive websites?",
       answer:
-        "Turnaround times depend on the complexity and scope of the animation project. We work closely with you to establish realistic timelines and deliver within the agreed schedule.",
+        "Absolutely. All our websites are responsive, ensuring optimal performance on desktops, tablets, and smartphones.",
     },
     {
-      question: "How will I communicate with the animation team during the project?",
+      question: " Will I be able to update my website myself?",
       answer:
-        "We offer various communication channels, including email, phone, and our project management platform, where you can monitor progress, provide feedback, and collaborate directly with our animation team.",
+        "Yes, we often integrate user-friendly CMS like WordPress, allowing clients to update content easily without coding.",
     },
     {
-      question: "What files do I need to provide to start an animation project?",
+      question: "What is the cost of developing a website?",
       answer:
-        "The required files vary based on your animation project’s needs, such as storyboards, scripts, or branding assets. Our team will provide detailed guidance on specific requirements during the initial consultation.",
+        "Costs vary based on features, design complexity, and functionality. We provide custom quotes after understanding your needs.",
     },
 ];
   const handleSendMessage = () => {

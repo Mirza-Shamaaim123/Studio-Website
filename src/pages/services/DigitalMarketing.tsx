@@ -55,42 +55,42 @@ const crouselContent = {
 };
 
 const crouselImages = [
-  "/public/services images/SCO.webp", // Building image for step 1
-  "/public/Services images/PPC.jpg", // Different building for step 2
-  "/public/Services images/Marketing.jpg", // Interior visualization for step 3
+  "/images/Servicesimages/SCO.webp", // Building image for step 1
+  "/images/Servicesimages/PPC.jpg", // Different building for step 2
+  "/images/Servicesimages/Marketing.jpg", // Interior visualization for step 3
   "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2835&auto=format&fit=crop", // Final delivery visualization for step 4
 ];
 
 const faqData = [
     {
-      question: "How complicated is the animation process?",
+      question: " What digital marketing services do you offer?",
       answer:
-        "With years of expertise in animation, we’ve streamlined the process to be as simple as possible for our clients. Our dedicated account managers ensure a seamless experience with personalized support, clear workflows, and regular updates, allowing you to review and provide feedback effortlessly.",
+        "We offer SEO, PPC, social media marketing, content marketing, email marketing, affiliate marketing, and analytics tracking.",
     },
     {
-      question: "Is my animation project data safe with you?",
+      question: "How can digital marketing help my business?",
       answer:
-        "Absolutely, we prioritize data security. All project files, including animation assets and client information, are encrypted and stored securely, adhering to industry-leading standards and compliance protocols.",
+        "It increases your brand visibility, attracts targeted traffic, boosts customer engagement, and generates leads or sales through measurable online strategies.",
     },
     {
-      question: "How many animation projects can you handle at once?",
+      question: "How long does it take to see results?",
       answer:
-        "Our skilled team of animators and designers enables us to manage multiple animation projects concurrently while maintaining high-quality output and meeting deadlines.",
+        "Results vary by service. SEO may take 3–6 months, while PPC and social media ads can show results much faster.",
     },
     {
-      question: "What is your turnaround time for animation projects?",
+      question: "What is the difference between SEO and PPC?",
       answer:
-        "Turnaround times depend on the complexity and scope of the animation project. We work closely with you to establish realistic timelines and deliver within the agreed schedule.",
+        "SEO drives organic traffic over time; PPC (Pay-Per-Click) delivers immediate results by displaying paid ads on search engines or platforms.",
     },
     {
-      question: "How will I communicate with the animation team during the project?",
+      question: "Do you manage social media accounts?",
       answer:
-        "We offer various communication channels, including email, phone, and our project management platform, where you can monitor progress, provide feedback, and collaborate directly with our animation team.",
+        "Yes, we manage content creation, posting schedules, engagement, and advertising on platforms like Facebook, Instagram, LinkedIn, and Twitter.",
     },
     {
-      question: "What files do I need to provide to start an animation project?",
+      question: "What industries do you serve?",
       answer:
-        "The required files vary based on your animation project’s needs, such as storyboards, scripts, or branding assets. Our team will provide detailed guidance on specific requirements during the initial consultation.",
+        "We work with various industries including retail, healthcare, education, real estate, technology, and more—tailoring strategies to fit each business.",
     },
 ];
   const handleSendMessage = () => {

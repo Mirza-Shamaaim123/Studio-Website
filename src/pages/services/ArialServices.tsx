@@ -10,17 +10,17 @@ const cardData = [
   {
     title: "Strategy",
     description:
-      "We begin every animation project by identifying your objectives, audience, and key messages. Whether it's 2D, 3D, or whiteboard animation, this strategic foundation ensures the visual storytelling aligns with your brand voice and communicates effectively.",
+      "Arial Services' strategy focuses on delivering advanced aerial solutions through cutting-edge drone technology, ensuring high-precision data, efficient project execution, and tailored services that meet the evolving needs of diverse industries.",
   },
   {
     title: "Positioning",
     description:
-      "Based on the strategic groundwork, we define the animation style and tone that best suits your brand. From sleek 3D animations to playful 2D or educational whiteboard styles, we position your message to stand out and engage the intended audience with clarity and purpose.",
+      "Arial Services is positioned as a trusted leader in aerial solutions, offering innovative, accurate, and cost-effective drone-based data collection and analysis to empower industries like construction, agriculture, and environmental monitoring.",
   },
   {
     title: "Creative",
     description:
-      "This phase transforms your ideas into compelling animations. Our creative team crafts visually rich 2D, 3D, and whiteboard animations using storytelling, motion graphics, and design expertise—bringing your vision to life with stunning results.",
+      "Arial Services combines technology and creativity to deliver stunning aerial visuals and innovative data solutions, transforming complex projects into engaging stories and actionable insights across various industries.",
   },
 ];
 
@@ -31,66 +31,66 @@ const projectImages = [
 ];
 
 const crouselContent = {
-  mainHeading: "3D visualisation has never been easier",
+  mainHeading: "Precision and Excellence in Aerial Services",
   steps: [
     {
       number: "01",
-      title: "3d Animation",
+      title: "Infrastructure Inspection",
       description:
-        "We are driven by creativity. We create innovative things to help you achieve better results and consolidate yourself in the market.",
+        "Infrastructure inspection uses drones to safely and efficiently assess bridges, roofs, towers, and pipelines, identifying issues without costly manual checks.",
     },
     {
       number: "02",
-      title: "2D Animation",
+      title: "Thermal Imaging & Analysis",
       description:
-        "We are driven by creativity. We create innovative things to help you achieve better results and consolidate yourself in the market.",
+        "Thermal imaging detects heat variations, identifying leaks, electrical faults, and moisture issues to prevent damage and improve energy efficiency.",
     },
     {
       number: "03",
-      title: "White board animation",
+      title: "Construction Site Monitoring",
       description:
-        "We are driven by creativity. We create innovative things to help you achieve better results and consolidate yourself in the market.",
+        "Construction site monitoring uses drones to track progress, ensure safety, measure volumes, and provide real-time aerial updates for efficient management.",
     }
   ],
 };
 
 const crouselImages = [
-  "https://images.prismic.io/cuub/a0abcba2-5a92-4b45-b3ad-6ef79e5a73fa_DOCKLANDS-DR-V03-PHOTOMONTAGE-FINAL.jpg?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=960", // Building image for step 1
-  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop", // Different building for step 2
-  "https://images.unsplash.com/photo-1481026469463-66327c86e544?q=80&w=2424&auto=format&fit=crop", // Interior visualization for step 3
+  "/images/Servicesimages/01 ArialServices.avif", // Building image for step 1
+  "/images/Servicesimages/02 ArialServices.avif", // Different building for step 2
+  "/images/Servicesimages/03 ArialServices.avif", // Interior visualization for step 3
   "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2835&auto=format&fit=crop", // Final delivery visualization for step 4
 ];
 
 const faqData = [
     {
-      question: "How complicated is the animation process?",
+      question: " What services does Arial Services provide?",
       answer:
-        "With years of expertise in animation, we’ve streamlined the process to be as simple as possible for our clients. Our dedicated account managers ensure a seamless experience with personalized support, clear workflows, and regular updates, allowing you to review and provide feedback effortlessly.",
+        "Arial Services specializes in aerial data collection, drone surveying, geospatial analysis, mapping, and remote sensing for industries such as construction, agriculture, and infrastructure",
     },
     {
-      question: "Is my animation project data safe with you?",
+      question: " What industries do you serve?",
       answer:
-        "Absolutely, we prioritize data security. All project files, including animation assets and client information, are encrypted and stored securely, adhering to industry-leading standards and compliance protocols.",
+        "We serve a wide range of industries including agriculture, real estate, urban planning, construction, mining, and environmental monitoring.",
     },
     {
-      question: "How many animation projects can you handle at once?",
+      question: "What equipment or technology do you use?",
       answer:
-        "Our skilled team of animators and designers enables us to manage multiple animation projects concurrently while maintaining high-quality output and meeting deadlines.",
+        "We use high-resolution drones, LiDAR, GIS tools, and advanced sensors to ensure accurate and efficient data collection.",
     },
     {
-      question: "What is your turnaround time for animation projects?",
+      question: " How accurate is your aerial data?",
       answer:
-        "Turnaround times depend on the complexity and scope of the animation project. We work closely with you to establish realistic timelines and deliver within the agreed schedule.",
+        "Our data meets industry-grade accuracy standards. We provide detailed reports and maps with precise coordinates tailored to project requirements.",
     },
     {
-      question: "How will I communicate with the animation team during the project?",
+      question: "Can I request custom data or specific formats?",
       answer:
-        "We offer various communication channels, including email, phone, and our project management platform, where you can monitor progress, provide feedback, and collaborate directly with our animation team.",
+        "Yes, we deliver data in various formats including GIS, CAD, and 3D models, customized to meet your needs.",
     },
     {
-      question: "What files do I need to provide to start an animation project?",
+      question: " How do I request a quote or start a project?",
       answer:
-        "The required files vary based on your animation project’s needs, such as storyboards, scripts, or branding assets. Our team will provide detailed guidance on specific requirements during the initial consultation.",
+        "You can contact us via our website, email, or phone. Provide your project details, and we’ll get back with a customized proposal.",
     },
 ];
   const handleSendMessage = () => {

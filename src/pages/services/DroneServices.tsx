@@ -10,17 +10,17 @@ const cardData = [
   {
     title: "Strategy",
     description:
-      "We begin every animation project by identifying your objectives, audience, and key messages. Whether it's 2D, 3D, or whiteboard animation, this strategic foundation ensures the visual storytelling aligns with your brand voice and communicates effectively.",
+      "Our drone services strategy focuses on delivering high-precision aerial data using advanced technology, optimizing workflows, reducing operational costs, and enhancing decision-making across industries like construction, agriculture, and real estate.",
   },
   {
     title: "Positioning",
     description:
-      "Based on the strategic groundwork, we define the animation style and tone that best suits your brand. From sleek 3D animations to playful 2D or educational whiteboard styles, we position your message to stand out and engage the intended audience with clarity and purpose.",
+      "Drone services are positioned as innovative, cost-effective solutions that provide accurate aerial data, enhance project efficiency, and offer a competitive edge in industries like construction, agriculture, inspection, and environmental monitoring.",
   },
   {
     title: "Creative",
     description:
-      "This phase transforms your ideas into compelling animations. Our creative team crafts visually rich 2D, 3D, and whiteboard animations using storytelling, motion graphics, and design expertise—bringing your vision to life with stunning results.",
+      "Drone services creatively capture unique aerial perspectives, blending technology and artistry to deliver stunning visuals, dynamic storytelling, and innovative data solutions for marketing, inspections, events, and industrial applications.",
   },
 ];
 
@@ -31,66 +31,66 @@ const projectImages = [
 ];
 
 const crouselContent = {
-  mainHeading: "3D visualisation has never been easier",
+  mainHeading: "Unlock New Perspectives with Drones",
   steps: [
     {
       number: "01",
-      title: "3d Animation",
+      title: "Aerial Photography & Videography",
       description:
-        "We are driven by creativity. We create innovative things to help you achieve better results and consolidate yourself in the market.",
+        "Aerial photography and videography capture stunning, high-angle visuals using drones, ideal for real estate, events, marketing, and cinematic storytelling.",
     },
     {
       number: "02",
-      title: "2D Animation",
+      title: "Land Surveying & Mapping",
       description:
-        "We are driven by creativity. We create innovative things to help you achieve better results and consolidate yourself in the market.",
+        "Aerial land surveying and mapping provide accurate, high-resolution data using drones, enhancing planning, construction, agriculture, and environmental monitoring efficiency.",
     },
     {
       number: "03",
-      title: "White board animation",
+      title: "Event Coverage",
       description:
-        "We are driven by creativity. We create innovative things to help you achieve better results and consolidate yourself in the market.",
+        "Event coverage with drones captures dynamic aerial views, offering unique perspectives for weddings, concerts, sports, and festivals with cinematic quality and real-time highlights.",
     }
   ],
 };
 
 const crouselImages = [
-  "https://images.prismic.io/cuub/a0abcba2-5a92-4b45-b3ad-6ef79e5a73fa_DOCKLANDS-DR-V03-PHOTOMONTAGE-FINAL.jpg?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=960", // Building image for step 1
-  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop", // Different building for step 2
-  "https://images.unsplash.com/photo-1481026469463-66327c86e544?q=80&w=2424&auto=format&fit=crop", // Interior visualization for step 3
+  "/images/Servicesimages/01 drone.avif", // Building image for step 1
+  "/images/Servicesimages/02 drone.avif", // Different building for step 2
+  "/images/Servicesimages/03 drone.avif", // Interior visualization for step 3
   "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2835&auto=format&fit=crop", // Final delivery visualization for step 4
 ];
 
 const faqData = [
     {
-      question: "How complicated is the animation process?",
+      question: "What types of drone services do you offer?",
       answer:
-        "With years of expertise in animation, we’ve streamlined the process to be as simple as possible for our clients. Our dedicated account managers ensure a seamless experience with personalized support, clear workflows, and regular updates, allowing you to review and provide feedback effortlessly.",
+        "We offer aerial photography, videography, mapping, surveying, inspection, and monitoring services for industries like construction, agriculture, real estate, and events.",
     },
     {
-      question: "Is my animation project data safe with you?",
+      question: "Are your drone pilots certified?",
       answer:
-        "Absolutely, we prioritize data security. All project files, including animation assets and client information, are encrypted and stored securely, adhering to industry-leading standards and compliance protocols.",
+        "Yes, all our drone operators are licensed and follow national aviation regulations to ensure legal, safe, and professional flight operations.",
     },
     {
-      question: "How many animation projects can you handle at once?",
+      question: "What equipment do you use?",
       answer:
-        "Our skilled team of animators and designers enables us to manage multiple animation projects concurrently while maintaining high-quality output and meeting deadlines.",
+        "We use professional-grade drones equipped with high-resolution cameras, thermal sensors, and LiDAR technology for precise data collection and imagery.",
     },
     {
-      question: "What is your turnaround time for animation projects?",
+      question: "Is drone service safe and legal in my area?",
       answer:
-        "Turnaround times depend on the complexity and scope of the animation project. We work closely with you to establish realistic timelines and deliver within the agreed schedule.",
+        "We strictly comply with local aviation authorities and obtain any necessary flight permissions before conducting operations to ensure full legal compliance.",
     },
     {
-      question: "How will I communicate with the animation team during the project?",
+      question: "Can drone services be customized for my project?",
       answer:
-        "We offer various communication channels, including email, phone, and our project management platform, where you can monitor progress, provide feedback, and collaborate directly with our animation team.",
+        "Absolutely. We tailor flight paths, camera angles, and data formats to match your specific project requirements.",
     },
     {
-      question: "What files do I need to provide to start an animation project?",
+      question: "How accurate is drone surveying and mapping?",
       answer:
-        "The required files vary based on your animation project’s needs, such as storyboards, scripts, or branding assets. Our team will provide detailed guidance on specific requirements during the initial consultation.",
+        "Our drones deliver high-precision data with centimeter-level accuracy, suitable for engineering, land development, and agricultural applications.",
     },
 ];
   const handleSendMessage = () => {

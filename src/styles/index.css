@@ -475,6 +475,13 @@ footer {
 }
 @media screen and (max-width:600px) {
   .SeeingisExp{
-    font-size: 50px;
+    font-size: 35px;
   }
+}
+.navbar-logo-img{
+  width: 100px;
+  height: 40px;
+   object-fit: contain;
+  margin: 0;
+  padding: 0;
 }

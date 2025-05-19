@@ -20,47 +20,79 @@ export default function ServicesAnimation({
       id: "service-animation-2",
       renderingLink: "/services/animation/",
       image:
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070",
+        "/images/Servicesimages/Animation.jpeg",
       title: "Animation",
     },
 
 
     {
       id: "service-video-production-1",
-      renderingLink: "/services/video-productions/",
+      renderingLink: "/services/video-production/",
       image:
-        "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070",
+        "/images/Servicesimages/Video.jpeg",
       title: "Video Production",
     },
-    
     {
-      id: "service-branding-3",
-      renderingLink: "/services/branding/",
+      id: "service-image-6",
+      renderingLink: "/services/image-creation/",
       image:
-        "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=2069",
-      title: "Branding",
+        "/images/Servicesimages/camera.avif",
+      title: "Image Creation",
     },
-    {
+     {
       id: "service-audio-4",
       renderingLink: "/services/audio-production/",
       image:
-        "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070",
+        "/images/Servicesimages/Audio.jpeg",
       title: "Audio Services",
     },
     {
       id: "service-timelapse-5",
       renderingLink: "/services/time-lapse-video/",
       image:
-        "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2073",
+        "/images/Servicesimages/Time.jpeg",
       title: "Time Lapse Video",
     },
+    
     {
-      id: "service-image-6",
-      renderingLink: "/services/image-creation/",
+      id: "service-branding-3",
+      renderingLink: "/services/drone-services/",
       image:
-        "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070",
-      title: "Image Creation",
+        "/images/Servicesimages/drone.avif",
+      title: "Drone Services",
     },
+     {
+      id: "service-branding-3",
+      renderingLink: "/services/arial-services/",
+      image:
+        "/images/Servicesimages/arial.avif",
+      title: "Arial Services",
+    },
+     {
+      id: "service-branding-3",
+      renderingLink: "/services/web-development/",
+      image:
+        "/images/Servicesimages/web.avif",
+      title: "Web Development",
+    },
+     {
+      id: "service-branding-3",
+      renderingLink: "/services/digital-marketing/",
+      image:
+        "/images/Servicesimages/Digital.jpeg",
+      title: "Digital Marketing",
+    },
+      {
+      id: "service-branding-3",
+      renderingLink: "/services/grapic-desgining/",
+      image:
+        "/images/Servicesimages/GrapicDesginHome.webp",
+      title: "Grapic Designing",
+    },
+    
+
+
+
   ],
 }: ServicesAnimationProps) {
   const [isMobile, setIsMobile] = useState(false);

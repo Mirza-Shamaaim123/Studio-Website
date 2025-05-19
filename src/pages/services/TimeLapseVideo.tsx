@@ -10,17 +10,17 @@ const cardData = [
   {
     title: "Strategy",
     description:
-      "We begin by understanding the project's duration, environment, and visual goals. This helps us determine the right camera setup, shooting intervals, and storage needs to capture your progress effectively over time.",
+      "Our time-lapse strategy combines durable equipment, remote monitoring, and expert editing to deliver compelling visual narratives that document progress, engage stakeholders, and elevate your project’s visibility and value.",
   },
   {
     title: "Positioning",
     description:
-      "Based on the site layout and project scope, we identify optimal camera angles and mounting solutions. Our team ensures long-term stability, weatherproofing, and uninterrupted power for consistent footage capture.",
+      "Positioned at the intersection of technology and storytelling, our time-lapse services deliver impactful visual documentation that enhances project transparency, boosts client engagement, and reinforces your brand’s commitment to excellence.",
   },
   {
     title: "Creative",
     description:
-      "Once captured, we transform months of footage into a compelling, high-quality time-lapse video. With editing, branding overlays, and optional music or narration, your final video tells a powerful visual story of progress.",
+      "We craft visually compelling time-lapse content that transforms ordinary progress into captivating stories—blending motion, rhythm, and detail to create memorable visuals that resonate across digital, broadcast, and client presentations.",
   },
 ];
 
@@ -31,40 +31,40 @@ const projectImages = [
 ];
 
 const crouselContent = {
-  mainHeading: "3D visualisation has never been easier",
+  mainHeading: "Watch Time Unfold",
   steps: [
     {
       number: "01",
-      title: "Fill the brief",
+      title: "4K & HD Video Production",
       description:
-        "Send us a completed short brief along with details about your project. It will help us formulate an offer for you.",
+        "Crisp, high-resolution time-lapse videos tailored for professional presentation or marketing use.",
     },
     {
       number: "02",
-      title: "Review the proposal",
+      title: "Short-Term Time-Lapse",
       description:
-        "We'll send you a detailed proposal with timeline and cost estimates for your project.",
+        "Capture fast-paced events or installations in stunning detail with short-term time-lapse—perfect for marketing, promotions, or live activations.",
     },
     {
       number: "03",
-      title: "Provide feedback",
+      title: "Project Highlight Reels",
       description:
-        "Review our initial concepts and provide feedback to ensure we're aligned with your vision.",
+        "Showcase your project’s key moments with dynamic highlight reels—crafted to impress stakeholders, clients, and audiences with powerful visuals.",
     },
     {
       number: "04",
-      title: "Receive final delivery",
+      title: "Solar-Powered Systems",
       description:
-        "Get your high-quality 3D visualizations ready for your marketing and presentation needs.",
+        "Reliable, eco-friendly solar-powered camera systems—ideal for remote sites, ensuring uninterrupted time-lapse capture without the need for external power.",
     },
   ],
 };
 
 const crouselImages = [
-  "https://images.prismic.io/cuub/a0abcba2-5a92-4b45-b3ad-6ef79e5a73fa_DOCKLANDS-DR-V03-PHOTOMONTAGE-FINAL.jpg?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=960", // Building image for step 1
-  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop", // Different building for step 2
-  "https://images.unsplash.com/photo-1481026469463-66327c86e544?q=80&w=2424&auto=format&fit=crop", // Interior visualization for step 3
-  "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2835&auto=format&fit=crop", // Final delivery visualization for step 4
+  "/images/Servicesimages/01 TimeLaspe.avif", // Building image for step 1
+  "/images/Servicesimages/02 TimeLaspe.avif", // Different building for step 2
+  "/images/Servicesimages/03 TimeLaspe.avif", // Interior visualization for step 3
+  "/images/Servicesimages/04 TimeLaspe.avif", // Final delivery visualization for step 4
 ];
 
 

@@ -10,17 +10,17 @@ const cardData = [
   {
     title: "Strategy",
     description:
-      "We begin by understanding the visual goals of your project — whether it's brand photography, product showcase, or 3D renderings. This planning ensures each image serves a clear purpose and supports your brand narrative.",
+      "An effective **image creation strategy** focuses on aligning visuals with brand identity, target audience, and platform requirements. It combines creativity, consistency, and purpose to enhance engagement, communication, and brand recognition.",
   },
   {
     title: "Positioning",
     description:
-      "Based on the project requirements, we decide on the most effective approach — be it a corporate setting, on-site event, studio product shoot, or virtual environment for render images — ensuring your visuals stand out where they matter.",
+      "**Image creation positioning** defines how visual content distinguishes a brand in the market. It emphasizes style, tone, and purpose to ensure consistency, attract the right audience, and strengthen brand perception.",
   },
   {
     title: "Creative",
     description:
-      "We execute the shoot or rendering with precision, creativity, and attention to detail. Through lighting, angles, composition, and post-editing, we craft images that are not just beautiful but also strategically effective.",
+      "**Image creation creativity** involves blending originality, design principles, and brand voice to produce visually compelling content. It captures attention, evokes emotion, and transforms ideas into impactful, memorable visual experiences.",
   },
 ]
 
@@ -32,19 +32,19 @@ const projectImages = [
 ];
 
 const crouselContent = {
-  mainHeading: "3D visualisation has never been easier",
+  mainHeading: "Creative & Eye-Catching:",
   steps: [
     {
       number: "01",
-      title: "Fill the brief",
+      title: "AI-Generated Image Creation",
       description:
-        "Send us a completed short brief along with details about your project. It will help us formulate an offer for you.",
+        "**AI-Generated Image Creation** uses artificial intelligence to craft unique, high-quality visuals tailored for branding, marketing, design, and storytelling.",
     },
     {
       number: "02",
-      title: "Review the proposal",
+      title: "Product Photography",
       description:
-        "We'll send you a detailed proposal with timeline and cost estimates for your project.",
+        "**Product Photography** captures high-quality images of items for e-commerce, catalogs, and ads, showcasing features, details, and visual appeal professionally.",
     },
     {
       number: "03",
@@ -54,7 +54,7 @@ const crouselContent = {
     },
     {
       number: "04",
-      title: "Receive final delivery",
+      title: "Social Media Graphics",
       description:
         "Get your high-quality 3D visualizations ready for your marketing and presentation needs.",
     },
@@ -62,10 +62,10 @@ const crouselContent = {
 };
 
 const crouselImages = [
-  "https://images.prismic.io/cuub/a0abcba2-5a92-4b45-b3ad-6ef79e5a73fa_DOCKLANDS-DR-V03-PHOTOMONTAGE-FINAL.jpg?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=960", // Building image for step 1
-  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop", // Different building for step 2
-  "https://images.unsplash.com/photo-1481026469463-66327c86e544?q=80&w=2424&auto=format&fit=crop", // Interior visualization for step 3
-  "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2835&auto=format&fit=crop", // Final delivery visualization for step 4
+  "/images/Servicesimages/01 ImageCreation.avif", // Building image for step 1
+  "/images/Servicesimages/02 ImageCreation.avif", // Different building for step 2
+  "/images/Servicesimages/03 ImageCreation.jpg", // Interior visualization for step 3
+  "/images/Servicesimages/04 ImageCreation.avif", // Final delivery visualization for step 4
 ];
 
 

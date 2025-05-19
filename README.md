@@ -7,7 +7,7 @@ A modern portfolio website for Elite Studio built with React, TypeScript, and Fr
 - Modern, responsive design
 - Smooth scroll animations
 - Interactive rotating elements
-- Video background
+-  background
 - Clean and professional UI
 
 ## Prerequisites
@@ -22,8 +22,8 @@ A modern portfolio website for Elite Studio built with React, TypeScript, and Fr
    ```bash
    npm install
    ```
-3. Add your video file:
-   - Place your background video file in the `public` directory as `background-video.mp4`
+3. Add your  file:
+   - Place your background  file in the `public` directory as `background-.mp4`
    - Place your logo file in the `public` directory as `logo.png`
 
 ## Development

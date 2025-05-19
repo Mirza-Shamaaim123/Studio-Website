@@ -110,6 +110,10 @@ export default function Header() {
                   Digital Marketing
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
+                <Link to="/services/grapic-desgining" className="dropdown-item">
+                  Grapic Designing
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
               </div>
             </div>
 
@@ -121,7 +125,7 @@ export default function Header() {
           {/* Logo */}
           <div className="navbar-logo">
             <Link to="/">
-              <div className="navbar-logo-cube"></div>
+              <img src="/logo.png" alt="website logo" className="navbar-logo-img" />
             </Link>
           </div>
         </div>
@@ -135,7 +139,7 @@ export default function Header() {
               <X className="mobile-menu-close-icon" />
             </button>
             <Link to="/" className="mobile-menu-logo-link">
-              <div className="mobile-menu-logo"></div>
+              <img src="/logo.png" alt="website logo" className="navbar-logo-img" />
             </Link>
           </div>
 

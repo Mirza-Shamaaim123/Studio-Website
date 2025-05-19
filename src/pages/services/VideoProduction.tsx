@@ -31,7 +31,7 @@ const projectImages = [
 ];
 
 const crouselContent = {
-  mainHeading: "3D visualisation has never been easier",
+  mainHeading: "Visual Storytelling for Modern Brands",
   steps: [
     {
       number: "01",

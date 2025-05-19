@@ -55,9 +55,9 @@ const crouselContent = {
 };
 
 const crouselImages = [
-  "https://images.prismic.io/cuub/a0abcba2-5a92-4b45-b3ad-6ef79e5a73fa_DOCKLANDS-DR-V03-PHOTOMONTAGE-FINAL.jpg?ixlib=gatsbyFP&auto=compress,format&fit=max&q=75&w=960", // Building image for step 1
-  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop", // Different building for step 2
-  "https://images.unsplash.com/photo-1481026469463-66327c86e544?q=80&w=2424&auto=format&fit=crop", // Interior visualization for step 3
+  "/images/Servicesimages/01 Animation.avif", // Building image for step 1
+  "/images/Servicesimages/02 Animation.avif", // Different building for step 2
+  "/images/Servicesimages/03 Animation.avif", // Interior visualization for step 3
   "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2835&auto=format&fit=crop", // Final delivery visualization for step 4
 ];
 
