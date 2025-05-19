@@ -49,7 +49,7 @@ export default function Header() {
 
   return (
     <>
-      <header className={`navbar ${isTransparent ? "navbar-transparent" : "navbar-white"}`}>
+      <header className={`navbar ${isTransparent ? "navbar-white" : "navbar-white"}`}>
         <div className="navbar-container">
           {/* Mobile menu button */}
           <button className="navbar-toggle" onClick={toggleMenu} aria-label="Toggle menu">
