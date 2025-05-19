@@ -4,6 +4,7 @@ import MainBoxAnimation from "../components/MainBoxAnimation";
 import ServicesBoxSection from "./services/_components/ServicesBoxSection";
 import TestimonialCard from "../components/about/TestimonialAboutCard";
 import ServicesAnimation from "../components/ServicesAnimation";
+import AnimatedLine from "../components/LineAnimation";
 
 export default function Main() {
   return (
@@ -18,7 +19,7 @@ export default function Main() {
           playsInline
         >
           <source
-            src="https://res.cloudinary.com/dhrpofba6/video/upload/v1745858184/a92yfmnxo1ewujkp7m7g.mp4"
+            src="/public/home-video.mp4"
             type="video/mp4"
           />
         </video>
@@ -31,6 +32,7 @@ export default function Main() {
       </section>
 
       <ServicesBoxSection />
+      <AnimatedLine/>
     </div>
   );
 }

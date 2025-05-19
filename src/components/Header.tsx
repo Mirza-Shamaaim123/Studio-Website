@@ -177,10 +177,30 @@ export default function Header() {
                   Time Lapse Video
                   <ArrowRight className="service-link-icon" size={14} />
                 </Link>
-                <Link to="/services/branding" className="mobile-menu-service-link" onClick={toggleMenu}>
-                  Branding
+                <Link to="/services/drone-services/" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Drone Services
                   <ArrowRight className="service-link-icon" size={14} />
                 </Link>
+                <Link to="/services/web-development/" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Web Development
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
+                <Link to="/services/digital-marketing/" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Digital Marketing
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
+                <Link to="/services/grapic-desgining/" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Graphic Designing
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
+                <Link to="/services/arial-services/" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Aerial Services
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
+                {/* <Link to="/services/branding" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Branding
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link> */}
               </div>
             </div>
           </nav>

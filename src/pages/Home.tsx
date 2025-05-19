@@ -95,7 +95,7 @@ const Home = () => {
       <section className="fixed top-0 left-0 w-full h-screen z-10 overflow-hidden">
         <div className="absolute inset-0 bg-black/30 z-20"></div>
         <video className="w-full h-full object-cover z-10" autoPlay muted loop playsInline>
-          <source src="/home-video.mp4" type="video/mp4" />
+          <source src="/background-video.mp4" type="video/mp4" />
         </video>
       </section>
 
@@ -401,7 +401,7 @@ const Home = () => {
           </motion.section>
         </div>
       </motion.div>
-      <AnimatedLine/>
+      
     </div>
   );
 };

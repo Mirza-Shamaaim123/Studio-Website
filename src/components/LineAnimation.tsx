@@ -8,7 +8,7 @@ const AnimatedLine = () => {
 
   const word = "SCROLL";
   const animationDuration = 3; // seconds
-  const delayBetweenLoops = 1; // seconds
+  const delayBetweenLoops = 3; // seconds
 
   const handleAnimationComplete = () => {
     if (textRef.current) {
