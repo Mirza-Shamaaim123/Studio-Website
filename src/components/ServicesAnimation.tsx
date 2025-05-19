@@ -15,6 +15,16 @@ interface ServicesAnimationProps {
 
 export default function ServicesAnimation({
   sections = [
+
+{
+      id: "service-animation-2",
+      renderingLink: "/services/animation/",
+      image:
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070",
+      title: "Animation",
+    },
+
+
     {
       id: "service-video-production-1",
       renderingLink: "/services/video-productions/",
@@ -22,13 +32,7 @@ export default function ServicesAnimation({
         "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2070",
       title: "Video Production",
     },
-    {
-      id: "service-animation-2",
-      renderingLink: "/services/animation/",
-      image:
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070",
-      title: "Animation",
-    },
+    
     {
       id: "service-branding-3",
       renderingLink: "/services/branding/",

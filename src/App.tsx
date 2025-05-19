@@ -22,6 +22,10 @@ import TimeLapseVideoServices from './pages/services/TimeLapseVideo';
 import AnimationServices from './pages/services/Animation';
 import VideoProductionServices from './pages/services/VideoProduction';
 import Main from './pages/Main';
+import DroneServices from './pages/services/DroneServices';
+import ArialServices from './pages/services/ArialServices';
+import WebDevelopment from './pages/services/WebDevelopment';
+import DigitalMarketing from './pages/services/DigitalMarketing';
 
 
 const theme = {
@@ -51,6 +55,10 @@ function App() {
           <Route path="/services/image-creation/" element={<ImageCreationServices />} />
           <Route path="/services/time-lapse-video/" element={<TimeLapseVideoServices />} />
           <Route path="/services/audio-production/" element={<AudioServices />} /> 
+          <Route path="/services/drone-services/" element={<DroneServices />} /> 
+          <Route path="/services/arial-services/" element={<ArialServices />} /> 
+          <Route path="/services/web-development/" element={<WebDevelopment />} />
+             <Route path="/services/digital-marketing/" element={<DigitalMarketing />} /> 
           <Route path="/services-animate/" element={<PinnedImageScrollSection />} />
         </Routes>
         <Footer />

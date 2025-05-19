@@ -39,7 +39,7 @@ const MainBoxAnimation = () => {
       else if (width < 768) setBoxSize(220);
       else if (width < 1024) setBoxSize(240);
       else if (width < 1280) setBoxSize(280);
-      else setBoxSize(320);
+      else setBoxSize(290);
     };
 
     updateBoxSize();

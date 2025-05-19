@@ -94,8 +94,20 @@ export default function Header() {
                   Time Lapse Video
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
-                <Link to="/services/branding" className="dropdown-item">
-                  Branding
+                <Link to="/services/drone-services" className="dropdown-item">
+                  Drone Services
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
+                <Link to="/services/arial-services" className="dropdown-item">
+                  Arial Services
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
+                <Link to="/services/web-development/" className="dropdown-item">
+                  Web Development
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
+                <Link to="/services/digital-marketing" className="dropdown-item">
+                  Digital Marketing
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
               </div>
