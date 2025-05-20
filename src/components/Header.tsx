@@ -78,6 +78,10 @@ export default function Header() {
                   Animation
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
+                <Link to="/services/time-lapse-video" className="dropdown-item">
+                  Time Lapse Video
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
                 <Link to="/services/video-production" className="dropdown-item">
                   Video Productions
                   <ArrowRight className="dropdown-item-icon" size={16} />
@@ -86,20 +90,16 @@ export default function Header() {
                   Image Creation
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
-                <Link to="/services/audio-production/" className="dropdown-item">
-                  Audio Services
-                  <ArrowRight className="dropdown-item-icon" size={16} />
-                </Link>
-                <Link to="/services/time-lapse-video" className="dropdown-item">
-                  Time Lapse Video
-                  <ArrowRight className="dropdown-item-icon" size={16} />
-                </Link>
                 <Link to="/services/drone-services" className="dropdown-item">
                   Drone Services
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
                 <Link to="/services/arial-services" className="dropdown-item">
                   Arial Services
+                  <ArrowRight className="dropdown-item-icon" size={16} />
+                </Link>
+                <Link to="/services/audio-production/" className="dropdown-item">
+                  Audio Services
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
                 <Link to="/services/web-development/" className="dropdown-item">
@@ -161,6 +161,10 @@ export default function Header() {
                   Animation
                   <ArrowRight className="service-link-icon" size={14} />
                 </Link>
+                 <Link to="/services/time-lapse-video" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Time Lapse Video
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
                 <Link to="/services/video-production" className="mobile-menu-service-link" onClick={toggleMenu}>
                   Video Productions
                   <ArrowRight className="service-link-icon" size={14} />
@@ -169,18 +173,20 @@ export default function Header() {
                   Image Creation
                   <ArrowRight className="service-link-icon" size={14} />
                 </Link>
+                 <Link to="/services/drone-services/" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Drone Services
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
+                 <Link to="/services/arial-services/" className="mobile-menu-service-link" onClick={toggleMenu}>
+                  Arial Services
+                  <ArrowRight className="service-link-icon" size={14} />
+                </Link>
                 <Link to="/services/audio-production/" className="mobile-menu-service-link" onClick={toggleMenu}>
                   Audio Services
                   <ArrowRight className="service-link-icon" size={14} />
                 </Link>
-                <Link to="/services/time-lapse-video" className="mobile-menu-service-link" onClick={toggleMenu}>
-                  Time Lapse Video
-                  <ArrowRight className="service-link-icon" size={14} />
-                </Link>
-                <Link to="/services/drone-services/" className="mobile-menu-service-link" onClick={toggleMenu}>
-                  Drone Services
-                  <ArrowRight className="service-link-icon" size={14} />
-                </Link>
+               
+               
                 <Link to="/services/web-development/" className="mobile-menu-service-link" onClick={toggleMenu}>
                   Web Development
                   <ArrowRight className="service-link-icon" size={14} />
@@ -193,10 +199,7 @@ export default function Header() {
                   Graphic Designing
                   <ArrowRight className="service-link-icon" size={14} />
                 </Link>
-                <Link to="/services/arial-services/" className="mobile-menu-service-link" onClick={toggleMenu}>
-                  Aerial Services
-                  <ArrowRight className="service-link-icon" size={14} />
-                </Link>
+               
                 {/* <Link to="/services/branding" className="mobile-menu-service-link" onClick={toggleMenu}>
                   Branding
                   <ArrowRight className="service-link-icon" size={14} />

@@ -15,84 +15,68 @@ interface ServicesAnimationProps {
 
 export default function ServicesAnimation({
   sections = [
-
-{
-      id: "service-animation-2",
+    {
+      id: "service-animation-1",
       renderingLink: "/services/animation/",
-      image:
-        "/images/Servicesimages/Animation.jpeg",
+      image: "/images/Servicesimages/Animation.jpeg",
       title: "Animation",
     },
-
-
     {
-      id: "service-video-production-1",
+      id: "service-timelapse-2",
+      renderingLink: "/services/time-lapse-video/",
+      image: "/images/Servicesimages/Time.jpeg",
+      title: "Time Lapse Video",
+    },
+    {
+      id: "service-video-production-3",
       renderingLink: "/services/video-production/",
-      image:
-        "/images/Servicesimages/Video.jpeg",
+      image: "/images/Servicesimages/Video.jpeg",
       title: "Video Production",
     },
     {
-      id: "service-image-6",
+      id: "service-image-4",
       renderingLink: "/services/image-creation/",
-      image:
-        "/images/Servicesimages/camera.avif",
+      image: "/images/Servicesimages/camera.avif",
       title: "Image Creation",
     },
-     {
-      id: "service-audio-4",
-      renderingLink: "/services/audio-production/",
-      image:
-        "/images/Servicesimages/Audio.jpeg",
-      title: "Audio Services",
-    },
     {
-      id: "service-timelapse-5",
-      renderingLink: "/services/time-lapse-video/",
-      image:
-        "/images/Servicesimages/Time.jpeg",
-      title: "Time Lapse Video",
-    },
-    
-    {
-      id: "service-branding-3",
+      id: "service-drone-5",
       renderingLink: "/services/drone-services/",
-      image:
-        "/images/Servicesimages/drone.avif",
+      image: "/images/Servicesimages/drone.avif",
       title: "Drone Services",
     },
-     {
-      id: "service-branding-3",
+      
+    {
+      id: "service-aerial-6",
       renderingLink: "/services/arial-services/",
-      image:
-        "/images/Servicesimages/arial.avif",
+      image: "/images/Servicesimages/arial.avif",
       title: "Arial Services",
     },
-     {
-      id: "service-branding-3",
+    {
+      id: "service-audio-7",
+      renderingLink: "/services/audio-production/",
+      image: "/images/Servicesimages/Audio.jpeg",
+      title: "Audio Services",
+    },
+
+    {
+      id: "service-branding-8",
       renderingLink: "/services/web-development/",
-      image:
-        "/images/Servicesimages/web.avif",
+      image: "/images/Servicesimages/web.avif",
       title: "Web Development",
     },
-     {
-      id: "service-branding-3",
+    {
+      id: "service-branding-9",
       renderingLink: "/services/digital-marketing/",
-      image:
-        "/images/Servicesimages/Digital.jpeg",
+      image: "/images/Servicesimages/Digital.jpeg",
       title: "Digital Marketing",
     },
-      {
-      id: "service-branding-3",
+    {
+      id: "service-branding-10",
       renderingLink: "/services/grapic-desgining/",
-      image:
-        "/images/Servicesimages/GrapicDesginHome.webp",
+      image: "/images/Servicesimages/GrapicDesginHome.webp",
       title: "Grapic Designing",
     },
-    
-
-
-
   ],
 }: ServicesAnimationProps) {
   const [isMobile, setIsMobile] = useState(false);
@@ -142,11 +126,7 @@ interface SectionComponentProps {
   totalSections: number;
 }
 
-function SectionComponent({
-  section,
-  index,
-  isMobile,
-}: SectionComponentProps) {
+function SectionComponent({ section, index, isMobile }: SectionComponentProps) {
   const [hovered, setHovered] = useState(false);
   const [buttonHovered, setButtonHovered] = useState(false);
 
@@ -351,7 +331,7 @@ function SectionComponent({
                 opacity: textOpacity,
               }}
             >
-              <p              
+              <p
                 style={{
                   display: "inline-block",
                   padding: "24px",
@@ -362,13 +342,13 @@ function SectionComponent({
                 <h2
                   style={{
                     color: "white",
-                    fontSize: isMobile ? "20px" : "26px",
+                    fontSize: isMobile ? "20px" : "30px",
                     fontWeight: 700,
                     margin: 0,
                     lineHeight: 1.2,
                   }}
                 >
-                  Seeing is Experiencing
+                  Seeing is Believing
                 </h2>
               </p>
             </motion.div>
@@ -494,28 +474,28 @@ function SectionComponent({
                     />
 
                     {/* Button text */}
-                   <Link to={'/projects'}>
-                    <motion.div
-                      style={{
-                        position: "relative",
-                        overflow: "hidden",
-                        width: "100%",
-                        zIndex: 2,
-                      }}
-                    >
-                      <motion.span
+                    <Link to={"/projects"}>
+                      <motion.div
                         style={{
-                          color: "white",
-                          fontWeight: 600,
-                          display: "block",
-                          clipPath: `inset(0 ${textClipWidth} 0 0)`,
-                          transform: "translateX(0)",
+                          position: "relative",
+                          overflow: "hidden",
+                          width: "100%",
+                          zIndex: 2,
                         }}
                       >
-                        SEE MORE PROJECTS
-                      </motion.span>
-                    </motion.div>
-                   </Link>
+                        <motion.span
+                          style={{
+                            color: "white",
+                            fontWeight: 600,
+                            display: "block",
+                            clipPath: `inset(0 ${textClipWidth} 0 0)`,
+                            transform: "translateX(0)",
+                          }}
+                        >
+                          SEE MORE PROJECTS
+                        </motion.span>
+                      </motion.div>
+                    </Link>
                   </motion.a>
                 </motion.div>
               </div>

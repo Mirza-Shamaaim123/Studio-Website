@@ -123,6 +123,11 @@ const Footer = () => {
               </Link>
             </li>
             <li>
+              <Link to="/services/time-lapse-video/" style={styles.link}>
+                Time-laps Video
+              </Link>
+            </li>
+            <li>
               <Link to="/services/video-production/" style={styles.link}>
                 Video Production
               </Link>
@@ -132,14 +137,10 @@ const Footer = () => {
                 Image Creations
               </Link>
             </li>
+
             <li>
-              <Link to="/services/audio-production/" style={styles.link}>
-                Audio Production
-              </Link>
-            </li>
-            <li>
-              <Link to="/services/time-lapse-video/" style={styles.link}>
-                Time-laps Video
+              <Link to="/services/drone-services/" style={styles.link}>
+                Drone Services
               </Link>
             </li>
           </ul>
@@ -149,13 +150,13 @@ const Footer = () => {
           <h2 style={styles.footerHeading}>Services</h2>
           <ul style={styles.footerList as React.CSSProperties}>
             <li>
-              <Link to="/services/drone-services/" style={styles.link}>
-                Drone Services
+              <Link to="/services/arial-services/" style={styles.link}>
+                Arial Services
               </Link>
             </li>
             <li>
-              <Link to="/services/arial-services/" style={styles.link}>
-                Arial Services
+              <Link to="/services/audio-production/" style={styles.link}>
+                Audio Production
               </Link>
             </li>
 

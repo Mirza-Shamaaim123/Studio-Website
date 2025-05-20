@@ -30,7 +30,7 @@ const projectImages = [
 ];
 
 const crouselContent = {
-  mainHeading: "Turning Scrolls into Sales",
+  mainHeading: "Pixels to Profits",
   steps: [
     {
       number: "01",
@@ -46,7 +46,7 @@ const crouselContent = {
     },
     {
       number: "03",
-      title: "Ai Integration",
+      title: "AI Integration",
       description:
         "AI integration enhances systems by automating tasks, analyzing data, improving decision-making, and delivering personalized user experiences across various digital platforms.",
     }
