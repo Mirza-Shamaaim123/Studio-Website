@@ -26,7 +26,7 @@ const Projects: React.FC = () => {
       items: [
         {
           title: "Main Showcase",
-          link: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          link: "/images/projectvideos/01 project.mp4",
         },
       ],
     },
@@ -35,11 +35,11 @@ const Projects: React.FC = () => {
       items: [
         {
           title: "Overview Clip",
-          link: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          link: "/images/projectvideos/02 projectvideo.mp4",
         },
         {
           title: "Detail Render",
-          link: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+          link: "/images/projectvideos/03 projectvideo.mp4",
         },
       ],
     },
@@ -48,15 +48,15 @@ const Projects: React.FC = () => {
       items: [
         {
           title: "Aerial View",
-          link: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          link: "/images/projectvideos/04 projectvideo.mp4",
         },
         {
           title: "Street Perspective",
-          link: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+          link: "/images/projectvideos/05 projectvideo.mp4",
         },
         {
           title: "Sunset Shot",
-          link: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+          link: "/images/projectvideos/06 projectvideo.mp4",
         },
       ],
     },
@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
       items: [
         {
           title: "York House",
-          link: "https://images.prismic.io/cuub/01874440-6893-413f-96c5-55f125fb1c86_YORK%20HOUSE%20V10%20HERO.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&q=75&w=2490",
+          link: "/images/projectvideos/07 projectvideo.mp4",
         },
       ],
     },

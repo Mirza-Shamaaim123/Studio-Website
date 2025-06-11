@@ -61,17 +61,20 @@ const AboutUsPage: React.FC = () => {
   return (
     <>
     <section className="hero-section border-none rounded-none">
+  <div className="hero-content">
+     <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{ width: '100%', height: '100vh' }}
+      >
+        <source src="/images/projectvideos/01 Aboutvideo.mp4" type="video/mp4" />
+      </video>
 
-        <div className="hero-content">
-          <motion.div
-            className="hero-cube"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-             <RotatingCube isScrollControlled={false} /> 
-            <div className="hero-text">
-              <motion.h1
+    <div className="hero-text">
+      <motion.h1
                 className="hero-title"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -79,10 +82,10 @@ const AboutUsPage: React.FC = () => {
               >
                 WHO WE ARE ?
               </motion.h1>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
+
 
       <div className="about-section">
         <div className="about-container">
@@ -127,22 +130,35 @@ const AboutUsPage: React.FC = () => {
                 <li>
                   <Link to="/services/animation/">Animation</Link>
                 </li>
+                 <li>
+                  <Link to="/services/time-lapse-video/">Time-lapse Video</Link>
+                </li>
                 <li>
                   <Link to="/services/video-production/">Video Productions</Link>
                 </li>
                 <li>
                   <Link to="/services/image-creation/">Image Creation</Link>
                 </li>
+                 <li>
+                  <Link to="/services/drone-services/">Drone Service</Link>
+                </li>
               </ul>
               <ul className="services-list">
+                 <li>
+                  <Link to="/services/Interior-Desgining/">3D Interior Desgin </Link>
+                  </li>
                 <li>
                   <Link to="/services/audio-production/">Audio Services</Link>
                 </li>
+               
                 <li>
-                  <Link to="/services/time-lapse-video/">Time-lapse Video</Link>
+                  <Link to="/services/web-development">Web Development</Link>
                 </li>
                 <li>
-                  <Link to="/services/branding/">Branding</Link>
+                 <Link to="/services/ui-desgining/"> UI/UX Desgining </Link>
+                </li>
+                 <li>
+                 <Link to="/services/grapic-desgining/"> Graphic Designing</Link>
                 </li>
               </ul>
             </div>
@@ -184,5 +200,34 @@ const AboutUsPage: React.FC = () => {
     </>
   );
 };
+
+
+
+
+
+
+/*<section className="hero-section border-none rounded-none">
+
+        <div className="hero-content">
+          <motion.div
+            className="hero-cube"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+             <RotatingCube isScrollControlled={false} /> 
+            <div className="hero-text">
+              <motion.h1
+                className="hero-title"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                WHO WE ARE ?
+              </motion.h1>
+            </div>
+          </motion.div>
+        </div>
+      </section>*/
 
 export default AboutUsPage;

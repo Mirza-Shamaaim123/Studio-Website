@@ -49,8 +49,8 @@ export default function ServicesAnimation({
     {
       id: "service-aerial-6",
       renderingLink: "/services/arial-services/",
-      image: "/images/Servicesimages/arial.avif",
-      title: "Arial Services",
+      image: "/images/Servicesimages/interior.avif",
+      title: "3D Interior Design",
     },
     {
       id: "service-audio-7",
@@ -68,8 +68,8 @@ export default function ServicesAnimation({
     {
       id: "service-branding-9",
       renderingLink: "/services/digital-marketing/",
-      image: "/images/Servicesimages/Digital.jpeg",
-      title: "Digital Marketing",
+      image: "/images/Servicesimages/uiux.avif",
+      title: "UI/UX Desgining",
     },
     {
       id: "service-branding-10",

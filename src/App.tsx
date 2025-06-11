@@ -8,13 +8,10 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import "./styles/services.css"
-
 import "./styles/index.css"
-
 import Footer from './components/Footer';
 import PinnedImageScrollSection from './components/ServicesAnimation';
 import Projects from './pages/project';
-
 import AudioServices from './pages/services/AudioServices';
 import BrandingServices from './pages/services/Branding';
 import ImageCreationServices from './pages/services/ImageCreation';
@@ -23,11 +20,12 @@ import AnimationServices from './pages/services/Animation';
 import VideoProductionServices from './pages/services/VideoProduction';
 import Main from './pages/Main';
 import DroneServices from './pages/services/DroneServices';
-import ArialServices from './pages/services/ArialServices';
 import WebDevelopment from './pages/services/WebDevelopment';
-import DigitalMarketing from './pages/services/DigitalMarketing';
-import GrapicDesgining from './pages/services/GrapicDesgining';
 import ScrollToTop from './components/ScrolltoTop';
+import UIDesgining from './pages/services/UIDesgining';
+import GrapicDesgining from './pages/services/GrapicDesgining';
+import InteriorDesgining from './pages/services/InteriorDesgining';
+
 
 
 const theme = {
@@ -58,11 +56,11 @@ function App() {
           <Route path="/services/image-creation/" element={<ImageCreationServices />} />
           <Route path="/services/time-lapse-video/" element={<TimeLapseVideoServices />} />
           <Route path="/services/audio-production/" element={<AudioServices />} /> 
-          <Route path="/services/drone-services/" element={<DroneServices />} /> 
-          <Route path="/services/arial-services/" element={<ArialServices />} /> 
+          <Route path="/services/drone-services/" element={<DroneServices />} />  
           <Route path="/services/web-development/" element={<WebDevelopment />} />
-          <Route path="/services/digital-marketing/" element={<DigitalMarketing />} /> 
-          <Route path="/services/grapic-desgining/" element={<GrapicDesgining />} /> 
+          <Route path="/services/interior-desgining/" element={<InteriorDesgining />} />
+          <Route path="/services/UI-Desgining/" element={<UIDesgining />} /> 
+          <Route path="/services/Grapic-Desgining/" element={<GrapicDesgining />} /> 
           <Route path="/services-animate/" element={<PinnedImageScrollSection />} />
         </Routes>
         <Footer />

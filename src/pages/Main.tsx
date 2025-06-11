@@ -18,7 +18,7 @@ export default function Main() {
   loop
   playsInline
 >
-  <source src="/home-video.mp4" type="video/mp4" />
+  <source src="/homevideo.mp4" type="video/mp4" />
 </video>
 
       </section>

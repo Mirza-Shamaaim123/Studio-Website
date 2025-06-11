@@ -10,17 +10,17 @@ const cardData = [
   {
     title: "Strategy",
     description:
-      "Our graphic design strategy blends creativity with brand goals—crafting visuals that communicate clearly, inspire engagement, and strengthen identity across digital, print, and social platforms for consistent brand impact.",
+      "We begin every animation project by identifying your objectives, audience, and key messages. Whether it's 2D, 3D, or whiteboard animation, this strategic foundation ensures the visual storytelling aligns with your brand voice and communicates effectively.",
   },
   {
     title: "Positioning",
     description:
-      "Positioned as a creative partner, our graphic design services deliver visually striking, brand-aligned solutions that elevate communication, enhance recognition, and set you apart in competitive digital and print spaces.",
+      "Based on the strategic groundwork, we define the animation style and tone that best suits your brand. From sleek 3D animations to playful 2D or educational whiteboard styles, we position your message to stand out and engage the intended audience with clarity and purpose.",
   },
   {
     title: "Creative",
     description:
-      "We turn ideas into visual stories—blending color, typography, and layout to create impactful designs that captivate audiences, reinforce brand identity, and drive lasting emotional connections.",
+      "This phase transforms your ideas into compelling animations. Our creative team crafts visually rich 2D, 3D, and whiteboard animations using storytelling, motion graphics, and design expertise—bringing your vision to life with stunning results.",
   },
 ];
 
@@ -31,73 +31,68 @@ const projectImages = [
 ];
 
 const crouselContent = {
-  mainHeading: "Professional Visual Design Solutions",
+  mainHeading: "Digital Marketing Decoded",
   steps: [
     {
       number: "01",
-      title: "Mobile App UI/UX Design",
+      title: "Search Engine Optimization (SEO)",
       description:
-        "Intuitive, user-centered mobile app design that enhances functionality, boosts engagement, and delivers a seamless, visually appealing user experience.",
+        "Search Engine Optimization (SEO) improves website visibility on search engines, driving organic traffic through keyword optimization, quality content, and technical enhancements.",
     },
     {
       number: "02",
-      title: "Portfolio Web Site Design: Landing Page",
+      title: "Pay-Per-Click Advertising (PPC)",
       description:
-        "Striking, personalized landing pages that showcase your work, capture attention, and leave a lasting impression on every visitor.",
+        "Pay-Per-Click (PPC) advertising drives targeted traffic by paying for each click on ads displayed in search engines or social media platforms.",
     },
     {
       number: "03",
-      title: "Career Web Site Design",
+      title: "Affiliate Marketing",
       description:
-        "Professional career websites designed to highlight skills, experience, and achievements—crafted to impress employers and support job-seeking success.",
-    },
-   
-    
+        "Affiliate marketing rewards partners for promoting products or services, driving sales or traffic through their referral links and marketing efforts.",
+    }
   ],
 };
 
 const crouselImages = [
-  "/images/Servicesimages/01 GrapicDesgin.webp", // Building image for step 1
-  "/images/Servicesimages/02 GrapicDesgin.webp", // Different building for step 2
-  "/images/Servicesimages/03 GrapicDesgin.webp", // Interior visualization for step 3
-  "/images/Servicesimages/04 AudioServices.avif", // Final delivery visualization for step 4
+  "/images/Servicesimages/SCO.webp", // Building image for step 1
+  "/images/Servicesimages/PPC.jpg", // Different building for step 2
+  "/images/Servicesimages/Marketing.jpg", // Interior visualization for step 3
+  "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2835&auto=format&fit=crop", // Final delivery visualization for step 4
 ];
 
-
- const faqData = [
-  {
-    question: "What types of graphic design services do you offer?",
-    answer:
-      "We offer logo design, branding, social media graphics, print materials, packaging, UI/UX design, and more. Custom projects are also welcome!",
-  },
-  {
-    question: "How long does a graphic design project take?",
-    answer:
-      "Timelines vary depending on the project’s complexity. Simple designs may take 2–3 days, while full branding packages can take 1–2 weeks.",
-  },
-  {
-    question: " How many revisions are included?",
-    answer:
-      "Most packages include 2–3 rounds of revisions. We're flexible and work with you to ensure you're satisfied with the final design.",
-  },
-  {
-    question: "What if I don’t like the initial designs?",
-    answer:
-      "We’ll revisit your brief and make the necessary changes. Your feedback is key to helping us refine and deliver the right visual solution.",
-  },
-  {
-    question: "What file formats will I receive?",
-    answer:
-      "You’ll receive high-resolution files in formats like JPG, PNG, PDF, and source files (AI, PSD, or SVG) depending on the project needs.",
-  },
-  {
-    question: "How do I get started?",
-    answer:
-      "Just contact us with your project details. We'll schedule a consultation, discuss your vision, and provide a custom quote and timeline.",
-  },
-]
-
-
+const faqData = [
+    {
+      question: " What digital marketing services do you offer?",
+      answer:
+        "We offer SEO, PPC, social media marketing, content marketing, email marketing, affiliate marketing, and analytics tracking.",
+    },
+    {
+      question: "How can digital marketing help my business?",
+      answer:
+        "It increases your brand visibility, attracts targeted traffic, boosts customer engagement, and generates leads or sales through measurable online strategies.",
+    },
+    {
+      question: "How long does it take to see results?",
+      answer:
+        "Results vary by service. SEO may take 3–6 months, while PPC and social media ads can show results much faster.",
+    },
+    {
+      question: "What is the difference between SEO and PPC?",
+      answer:
+        "SEO drives organic traffic over time; PPC (Pay-Per-Click) delivers immediate results by displaying paid ads on search engines or platforms.",
+    },
+    {
+      question: "Do you manage social media accounts?",
+      answer:
+        "Yes, we manage content creation, posting schedules, engagement, and advertising on platforms like Facebook, Instagram, LinkedIn, and Twitter.",
+    },
+    {
+      question: "What industries do you serve?",
+      answer:
+        "We work with various industries including retail, healthcare, education, real estate, technology, and more—tailoring strategies to fit each business.",
+    },
+];
   const handleSendMessage = () => {
     console.log("Send message clicked")
     // Implement your send message functionality here
@@ -107,7 +102,7 @@ const crouselImages = [
     console.log("Schedule call clicked")
     // Implement your schedule call functionality here
   }
-    const partnersData = [
+  const partnersData = [
     { name: "KFK", logo: "/images/brands/brand-1.avif", alt: "KFK Logo" },
     { name: "DKO", logo: "/images/brands/brand-2.avif", alt: "DKO Logo" },
     { name: "Milieu", logo: "/images/brands/brand-3.avif", alt: "Milieu Logo" },
@@ -118,7 +113,7 @@ const crouselImages = [
     { name: "MHNDU", logo: "/images/brands/brand-8.avif", alt: "MHNDU Logo" },
     { name: "PS", logo: "/images/brands/brand-9.avif", alt: "PS Logo" },
     { name: "Eldridge Anderson", logo: "/images/brands/brand-10.avif", alt: "Eldridge Anderson Logo" },
-];
+]
 
 function GrapicDesgining() {
   return (
@@ -133,6 +128,7 @@ function GrapicDesgining() {
        <PartnersSection partners={partnersData} />
       <ServicesFAQ faqItems={faqData} onSendMessage={handleSendMessage} onScheduleCall={handleScheduleCall} />
       <ServicesBoxSection/>
+
     </>
   )
 }

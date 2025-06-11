@@ -464,10 +464,12 @@
 //   </div>
 // </div>;
 
-import React from "react";
+import React,{useState} from "react";
 import "./contact.css";
+import emailjs from '@emailjs/browser';
 
-export default function ContactPage() {
+
+export default function ContactPage() {  
   return (
     <div className="contact-container">
       <div className="main">
@@ -553,10 +555,10 @@ export default function ContactPage() {
 
         <div className="contact-right">
           <h1>Reach out now</h1>
-          <form>
-            <input type="text" placeholder="Your name" />
-            <input type="email" placeholder="Your email" />
-            <textarea placeholder="Your message"></textarea>
+          <form  >
+            <input type="text"  placeholder="Your name" />
+            <input type="email"  placeholder="Your email" />
+            <textarea  placeholder="Your message"></textarea>
             <button type="submit">
               <span className="red-box"></span>
               SEND MESSAGE
@@ -566,4 +568,4 @@ export default function ContactPage() {
       </div>
     </div>
   );
-}
+ };

@@ -150,8 +150,8 @@ const Footer = () => {
           <h2 style={styles.footerHeading}>Services</h2>
           <ul style={styles.footerList as React.CSSProperties}>
             <li>
-              <Link to="/services/arial-services/" style={styles.link}>
-                Arial Services
+              <Link to="/services/Interior-Desgining/" style={styles.link}>
+                3D Interior Desgin
               </Link>
             </li>
             <li>
@@ -167,8 +167,8 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/services/digital-marketing/" style={styles.link}>
-                Digital Marketing
+              <Link to="/services/ui-desgining/" style={styles.link}>
+                UI/UX Desgining
               </Link>
             </li>
 

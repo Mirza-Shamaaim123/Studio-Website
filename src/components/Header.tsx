@@ -94,8 +94,8 @@ export default function Header() {
                   Drone Services
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
-                <Link to="/services/arial-services" className="dropdown-item">
-                  Arial Services
+                <Link to="/services/Interior-desgining" className="dropdown-item">
+                  3D Interior Desgin
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
                 <Link to="/services/audio-production/" className="dropdown-item">
@@ -106,14 +106,15 @@ export default function Header() {
                   Web Development
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
-                <Link to="/services/digital-marketing" className="dropdown-item">
-                  Digital Marketing
+                   <Link to="/services/UI-Desgining" className="dropdown-item">
+                  UI/UX Desgining
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
                 <Link to="/services/grapic-desgining" className="dropdown-item">
-                  Grapic Designing
+                  Grapic Desgining
                   <ArrowRight className="dropdown-item-icon" size={16} />
                 </Link>
+             
               </div>
             </div>
 
